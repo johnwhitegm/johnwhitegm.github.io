@@ -2,10 +2,7 @@
 <html>
 <head>
   <title>World of Warcraft Fan Site</title>
-  
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-<style>
+  <style>
     body {
       background-color: black;
       color: #D7CEA4;
@@ -42,7 +39,35 @@
       border: 1px solid #555;
     }
     
-.gallery a:hover img {
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-item {
+  width: 180px;
+  height: 210px;
+  text-align: center;
+  font-size: 10px;
+  color: #AAA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-item a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid #555;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #222;
+}
+.gallery-item:hover img {
   transform: scale(1.05);
   box-shadow: 0 0 10px gold;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -51,8 +76,7 @@
     .gallery img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      background-color: #222;
+      object-fit: cover;
       display: block;
     }
     .footer {
@@ -76,996 +100,975 @@
           <a href="#screenshots">Screenshots</a>
           <a href="#templates">Templates</a>
 
-          <a href="#artwork">Artwork</a>
-          <a href="#screenshots">Screenshots</a>
-          <a href="#class_renders-humans">Humans</a>
-          <a href="#class_renders-night elf">Night Elf</a>
-          <a href
+    
 <div id="artwork" class="section-title">📂 Artwork</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/alliance.jpg" data-lightbox="artwork" title="alliance.jpg">
       <img src="artwork/alliance.jpg" alt="alliance.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">alliance.jpg</div>
+    alliance.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/announcement.jpg" data-lightbox="artwork" title="announcement.jpg">
       <img src="artwork/announcement.jpg" alt="announcement.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">announcement.jpg</div>
+    announcement.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/darkportal.jpg" data-lightbox="artwork" title="darkportal.jpg">
       <img src="artwork/darkportal.jpg" alt="darkportal.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">darkportal.jpg</div>
+    darkportal.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/gryphon.jpg" data-lightbox="artwork" title="gryphon.jpg">
       <img src="artwork/gryphon.jpg" alt="gryphon.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">gryphon.jpg</div>
+    gryphon.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/HumanFemaleBackground.jpg" data-lightbox="artwork" title="HumanFemaleBackground.jpg">
       <img src="artwork/HumanFemaleBackground.jpg" alt="HumanFemaleBackground.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">HumanFemaleBackground.jpg</div>
+    HumanFemaleBackground.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/ironforge.jpg" data-lightbox="artwork" title="ironforge.jpg">
       <img src="artwork/ironforge.jpg" alt="ironforge.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">ironforge.jpg</div>
+    ironforge.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/nightelves.jpg" data-lightbox="artwork" title="nightelves.jpg">
       <img src="artwork/nightelves.jpg" alt="nightelves.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">nightelves.jpg</div>
+    nightelves.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/stormwindmap.jpg" data-lightbox="artwork" title="stormwindmap.jpg">
       <img src="artwork/stormwindmap.jpg" alt="stormwindmap.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">stormwindmap.jpg</div>
+    stormwindmap.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="artwork/tauren.jpg" data-lightbox="artwork" title="tauren.jpg">
       <img src="artwork/tauren.jpg" alt="tauren.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">tauren.jpg</div>
+    tauren.jpg
   </div>
 </div>
 <div id="screenshots" class="section-title">📂 Screenshots</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Alliance-Gathering.jpg" data-lightbox="screenshots" title="Alliance-Gathering.jpg">
       <img src="screenshots/Alliance-Gathering.jpg" alt="Alliance-Gathering.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Alliance-Gathering.jpg</div>
+    Alliance-Gathering.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Ancient-Protector.jpg" data-lightbox="screenshots" title="Ancient-Protector.jpg">
       <img src="screenshots/Ancient-Protector.jpg" alt="Ancient-Protector.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Ancient-Protector.jpg</div>
+    Ancient-Protector.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/banking.jpg" data-lightbox="screenshots" title="banking.jpg">
       <img src="screenshots/banking.jpg" alt="banking.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">banking.jpg</div>
+    banking.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/batrider.jpg" data-lightbox="screenshots" title="batrider.jpg">
       <img src="screenshots/batrider.jpg" alt="batrider.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">batrider.jpg</div>
+    batrider.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/bear.jpg" data-lightbox="screenshots" title="bear.jpg">
       <img src="screenshots/bear.jpg" alt="bear.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">bear.jpg</div>
+    bear.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/berry-hunting.jpg" data-lightbox="screenshots" title="berry-hunting.jpg">
       <img src="screenshots/berry-hunting.jpg" alt="berry-hunting.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">berry-hunting.jpg</div>
+    berry-hunting.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Big-Fight.jpg" data-lightbox="screenshots" title="Big-Fight.jpg">
       <img src="screenshots/Big-Fight.jpg" alt="Big-Fight.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Big-Fight.jpg</div>
+    Big-Fight.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/blackrock.jpg" data-lightbox="screenshots" title="blackrock.jpg">
       <img src="screenshots/blackrock.jpg" alt="blackrock.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">blackrock.jpg</div>
+    blackrock.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/blacksmithing.jpg" data-lightbox="screenshots" title="blacksmithing.jpg">
       <img src="screenshots/blacksmithing.jpg" alt="blacksmithing.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">blacksmithing.jpg</div>
+    blacksmithing.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/bloodring.jpg" data-lightbox="screenshots" title="bloodring.jpg">
       <img src="screenshots/bloodring.jpg" alt="bloodring.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">bloodring.jpg</div>
+    bloodring.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/campfire.jpg" data-lightbox="screenshots" title="campfire.jpg">
       <img src="screenshots/campfire.jpg" alt="campfire.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">campfire.jpg</div>
+    campfire.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Circle-of-Light.jpg" data-lightbox="screenshots" title="Circle-of-Light.jpg">
       <img src="screenshots/Circle-of-Light.jpg" alt="Circle-of-Light.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Circle-of-Light.jpg</div>
+    Circle-of-Light.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/darkshire.jpg" data-lightbox="screenshots" title="darkshire.jpg">
       <img src="screenshots/darkshire.jpg" alt="darkshire.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">darkshire.jpg</div>
+    darkshire.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/darnassus.jpg" data-lightbox="screenshots" title="darnassus.jpg">
       <img src="screenshots/darnassus.jpg" alt="darnassus.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">darnassus.jpg</div>
+    darnassus.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/decaying-fish.jpg" data-lightbox="screenshots" title="decaying-fish.jpg">
       <img src="screenshots/decaying-fish.jpg" alt="decaying-fish.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">decaying-fish.jpg</div>
+    decaying-fish.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/divineshield.jpg" data-lightbox="screenshots" title="divineshield.jpg">
       <img src="screenshots/divineshield.jpg" alt="divineshield.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">divineshield.jpg</div>
+    divineshield.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/dragonspawn.jpg" data-lightbox="screenshots" title="dragonspawn.jpg">
       <img src="screenshots/dragonspawn.jpg" alt="dragonspawn.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">dragonspawn.jpg</div>
+    dragonspawn.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Dwarf-in-Armor.jpg" data-lightbox="screenshots" title="Dwarf-in-Armor.jpg">
       <img src="screenshots/Dwarf-in-Armor.jpg" alt="Dwarf-in-Armor.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Dwarf-in-Armor.jpg</div>
+    Dwarf-in-Armor.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Dwarves-on-Ram-Mounts.jpg" data-lightbox="screenshots" title="Dwarves-on-Ram-Mounts.jpg">
       <img src="screenshots/Dwarves-on-Ram-Mounts.jpg" alt="Dwarves-on-Ram-Mounts.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Dwarves-on-Ram-Mounts.jpg</div>
+    Dwarves-on-Ram-Mounts.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/engineering.jpg" data-lightbox="screenshots" title="engineering.jpg">
       <img src="screenshots/engineering.jpg" alt="engineering.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">engineering.jpg</div>
+    engineering.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/fight.jpg" data-lightbox="screenshots" title="fight.jpg">
       <img src="screenshots/fight.jpg" alt="fight.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">fight.jpg</div>
+    fight.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Goblin-Shredder.jpg" data-lightbox="screenshots" title="Goblin-Shredder.jpg">
       <img src="screenshots/Goblin-Shredder.jpg" alt="Goblin-Shredder.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Goblin-Shredder.jpg</div>
+    Goblin-Shredder.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Gryphon-Fly-by.jpg" data-lightbox="screenshots" title="Gryphon-Fly-by.jpg">
       <img src="screenshots/Gryphon-Fly-by.jpg" alt="Gryphon-Fly-by.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Gryphon-Fly-by.jpg</div>
+    Gryphon-Fly-by.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/gryphon.jpg" data-lightbox="screenshots" title="gryphon.jpg">
       <img src="screenshots/gryphon.jpg" alt="gryphon.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">gryphon.jpg</div>
+    gryphon.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/horse.jpg" data-lightbox="screenshots" title="horse.jpg">
       <img src="screenshots/horse.jpg" alt="horse.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">horse.jpg</div>
+    horse.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/hot-babes-at-the-tavern.jpg" data-lightbox="screenshots" title="hot-babes-at-the-tavern.jpg">
       <img src="screenshots/hot-babes-at-the-tavern.jpg" alt="hot-babes-at-the-tavern.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">hot-babes-at-the-tavern.jpg</div>
+    hot-babes-at-the-tavern.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/instance.jpg" data-lightbox="screenshots" title="instance.jpg">
       <img src="screenshots/instance.jpg" alt="instance.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">instance.jpg</div>
+    instance.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/ironforge.jpg" data-lightbox="screenshots" title="ironforge.jpg">
       <img src="screenshots/ironforge.jpg" alt="ironforge.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">ironforge.jpg</div>
+    ironforge.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/lost-temple.jpg" data-lightbox="screenshots" title="lost-temple.jpg">
       <img src="screenshots/lost-temple.jpg" alt="lost-temple.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">lost-temple.jpg</div>
+    lost-temple.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/meeting-at-the-bridge.jpg" data-lightbox="screenshots" title="meeting-at-the-bridge.jpg">
       <img src="screenshots/meeting-at-the-bridge.jpg" alt="meeting-at-the-bridge.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">meeting-at-the-bridge.jpg</div>
+    meeting-at-the-bridge.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Mountain-Giant.jpg" data-lightbox="screenshots" title="Mountain-Giant.jpg">
       <img src="screenshots/Mountain-Giant.jpg" alt="Mountain-Giant.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Mountain-Giant.jpg</div>
+    Mountain-Giant.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/murlocs.jpg" data-lightbox="screenshots" title="murlocs.jpg">
       <img src="screenshots/murlocs.jpg" alt="murlocs.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">murlocs.jpg</div>
+    murlocs.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Night-Elf-at-Fountain.jpg" data-lightbox="screenshots" title="Night-Elf-at-Fountain.jpg">
       <img src="screenshots/Night-Elf-at-Fountain.jpg" alt="Night-Elf-at-Fountain.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Night-Elf-at-Fountain.jpg</div>
+    Night-Elf-at-Fountain.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Night-Elves-and-Mount.jpg" data-lightbox="screenshots" title="Night-Elves-and-Mount.jpg">
       <img src="screenshots/Night-Elves-and-Mount.jpg" alt="Night-Elves-and-Mount.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Night-Elves-and-Mount.jpg</div>
+    Night-Elves-and-Mount.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/nightelfish.jpg" data-lightbox="screenshots" title="nightelfish.jpg">
       <img src="screenshots/nightelfish.jpg" alt="nightelfish.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">nightelfish.jpg</div>
+    nightelfish.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/nightelves.jpg" data-lightbox="screenshots" title="nightelves.jpg">
       <img src="screenshots/nightelves.jpg" alt="nightelves.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">nightelves.jpg</div>
+    nightelves.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/nightmare.jpg" data-lightbox="screenshots" title="nightmare.jpg">
       <img src="screenshots/nightmare.jpg" alt="nightmare.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">nightmare.jpg</div>
+    nightmare.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Ogre-Mage.jpg" data-lightbox="screenshots" title="Ogre-Mage.jpg">
       <img src="screenshots/Ogre-Mage.jpg" alt="Ogre-Mage.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Ogre-Mage.jpg</div>
+    Ogre-Mage.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/On-Horseback.jpg" data-lightbox="screenshots" title="On-Horseback.jpg">
       <img src="screenshots/On-Horseback.jpg" alt="On-Horseback.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">On-Horseback.jpg</div>
+    On-Horseback.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/orgrimmar.jpg" data-lightbox="screenshots" title="orgrimmar.jpg">
       <img src="screenshots/orgrimmar.jpg" alt="orgrimmar.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">orgrimmar.jpg</div>
+    orgrimmar.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/pumpkin-patch.jpg" data-lightbox="screenshots" title="pumpkin-patch.jpg">
       <img src="screenshots/pumpkin-patch.jpg" alt="pumpkin-patch.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">pumpkin-patch.jpg</div>
+    pumpkin-patch.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/ram.jpg" data-lightbox="screenshots" title="ram.jpg">
       <img src="screenshots/ram.jpg" alt="ram.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">ram.jpg</div>
+    ram.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Resurrection.jpg" data-lightbox="screenshots" title="Resurrection.jpg">
       <img src="screenshots/Resurrection.jpg" alt="Resurrection.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Resurrection.jpg</div>
+    Resurrection.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/shiny.jpg" data-lightbox="screenshots" title="shiny.jpg">
       <img src="screenshots/shiny.jpg" alt="shiny.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">shiny.jpg</div>
+    shiny.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/stormwind-at-night.jpg" data-lightbox="screenshots" title="stormwind-at-night.jpg">
       <img src="screenshots/stormwind-at-night.jpg" alt="stormwind-at-night.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">stormwind-at-night.jpg</div>
+    stormwind-at-night.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/stormwind-at-night2.jpg" data-lightbox="screenshots" title="stormwind-at-night2.jpg">
       <img src="screenshots/stormwind-at-night2.jpg" alt="stormwind-at-night2.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">stormwind-at-night2.jpg</div>
+    stormwind-at-night2.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/stormwind.jpg" data-lightbox="screenshots" title="stormwind.jpg">
       <img src="screenshots/stormwind.jpg" alt="stormwind.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">stormwind.jpg</div>
+    stormwind.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/throneroom.jpg" data-lightbox="screenshots" title="throneroom.jpg">
       <img src="screenshots/throneroom.jpg" alt="throneroom.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">throneroom.jpg</div>
+    throneroom.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/thunderbluff.jpg" data-lightbox="screenshots" title="thunderbluff.jpg">
       <img src="screenshots/thunderbluff.jpg" alt="thunderbluff.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">thunderbluff.jpg</div>
+    thunderbluff.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/troll-fight.jpg" data-lightbox="screenshots" title="troll-fight.jpg">
       <img src="screenshots/troll-fight.jpg" alt="troll-fight.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">troll-fight.jpg</div>
+    troll-fight.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Troll-on-Raptor-Mount.jpg" data-lightbox="screenshots" title="Troll-on-Raptor-Mount.jpg">
       <img src="screenshots/Troll-on-Raptor-Mount.jpg" alt="Troll-on-Raptor-Mount.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Troll-on-Raptor-Mount.jpg</div>
+    Troll-on-Raptor-Mount.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Undead-and-Mounts.jpg" data-lightbox="screenshots" title="Undead-and-Mounts.jpg">
       <img src="screenshots/Undead-and-Mounts.jpg" alt="Undead-and-Mounts.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Undead-and-Mounts.jpg</div>
+    Undead-and-Mounts.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Undead-Patrol.jpg" data-lightbox="screenshots" title="Undead-Patrol.jpg">
       <img src="screenshots/Undead-Patrol.jpg" alt="Undead-Patrol.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Undead-Patrol.jpg</div>
+    Undead-Patrol.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/undead.jpg" data-lightbox="screenshots" title="undead.jpg">
       <img src="screenshots/undead.jpg" alt="undead.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">undead.jpg</div>
+    undead.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/undercity.jpg" data-lightbox="screenshots" title="undercity.jpg">
       <img src="screenshots/undercity.jpg" alt="undercity.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">undercity.jpg</div>
+    undercity.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/wolf.jpg" data-lightbox="screenshots" title="wolf.jpg">
       <img src="screenshots/wolf.jpg" alt="wolf.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">wolf.jpg</div>
+    wolf.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/wyvern.jpg" data-lightbox="screenshots" title="wyvern.jpg">
       <img src="screenshots/wyvern.jpg" alt="wyvern.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">wyvern.jpg</div>
+    wyvern.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="screenshots/Wyverns-under-the-Bridge.jpg" data-lightbox="screenshots" title="Wyverns-under-the-Bridge.jpg">
       <img src="screenshots/Wyverns-under-the-Bridge.jpg" alt="Wyverns-under-the-Bridge.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">Wyverns-under-the-Bridge.jpg</div>
+    Wyverns-under-the-Bridge.jpg
   </div>
 </div>
 <div id="logos" class="section-title">📂 Logos</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="logos/blizzlogo.gif" data-lightbox="logos" title="blizzlogo.gif">
       <img src="logos/blizzlogo.gif" alt="blizzlogo.gif">
     </a>
-    <div style="font-size:10px; color:#AAA;">blizzlogo.gif</div>
+    blizzlogo.gif
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="logos/wowlogo.jpg" data-lightbox="logos" title="wowlogo.jpg">
       <img src="logos/wowlogo.jpg" alt="wowlogo.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">wowlogo.jpg</div>
+    wowlogo.jpg
   </div>
 </div>
 <div id="html-images" class="section-title">📂 Html/Images</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="html/images/header.jpg" data-lightbox="html-images" title="header.jpg">
       <img src="html/images/header.jpg" alt="header.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">header.jpg</div>
+    header.jpg
   </div>
 </div>
 <div id="templates" class="section-title">📂 Templates</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="templates/button.jpg" data-lightbox="templates" title="button.jpg">
       <img src="templates/button.jpg" alt="button.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">button.jpg</div>
+    button.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="templates/charactercircle.jpg" data-lightbox="templates" title="charactercircle.jpg">
       <img src="templates/charactercircle.jpg" alt="charactercircle.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">charactercircle.jpg</div>
+    charactercircle.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="templates/icon.jpg" data-lightbox="templates" title="icon.jpg">
       <img src="templates/icon.jpg" alt="icon.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">icon.jpg</div>
+    icon.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="templates/screenshotborder.jpg" data-lightbox="templates" title="screenshotborder.jpg">
       <img src="templates/screenshotborder.jpg" alt="screenshotborder.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">screenshotborder.jpg</div>
+    screenshotborder.jpg
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="templates/texttemplate.jpg" data-lightbox="templates" title="texttemplate.jpg">
       <img src="templates/texttemplate.jpg" alt="texttemplate.jpg">
     </a>
-    <div style="font-size:10px; color:#AAA;">texttemplate.jpg</div>
+    texttemplate.jpg
   </div>
 </div>
 <div id="class_renders" class="section-title">📂 Class Renders</div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Humans</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/mage.png" data-lightbox="class_renders" title="mage.png">
       <img src="class_renders/Humans/mage.png" alt="mage.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage.png</div>
+    mage.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/mage2.png" data-lightbox="class_renders" title="mage2.png">
       <img src="class_renders/Humans/mage2.png" alt="mage2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage2.png</div>
+    mage2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/paladin.png" data-lightbox="class_renders" title="paladin.png">
       <img src="class_renders/Humans/paladin.png" alt="paladin.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">paladin.png</div>
+    paladin.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/priest.png" data-lightbox="class_renders" title="priest.png">
       <img src="class_renders/Humans/priest.png" alt="priest.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest.png</div>
+    priest.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/priest2.png" data-lightbox="class_renders" title="priest2.png">
       <img src="class_renders/Humans/priest2.png" alt="priest2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest2.png</div>
+    priest2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/rogue.png" data-lightbox="class_renders" title="rogue.png">
       <img src="class_renders/Humans/rogue.png" alt="rogue.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue.png</div>
+    rogue.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
       <img src="class_renders/Humans/warlock1.png" alt="warlock1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock1.png</div>
+    warlock1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
       <img src="class_renders/Humans/warlock2.png" alt="warlock2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock2.png</div>
+    warlock2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Humans/warrior.png" data-lightbox="class_renders" title="warrior.png">
       <img src="class_renders/Humans/warrior.png" alt="warrior.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior.png</div>
+    warrior.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Night Elf</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/druid.png" data-lightbox="class_renders" title="druid.png">
       <img src="class_renders/Night Elf/druid.png" alt="druid.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">druid.png</div>
+    druid.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/druid2.png" data-lightbox="class_renders" title="druid2.png">
       <img src="class_renders/Night Elf/druid2.png" alt="druid2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">druid2.png</div>
+    druid2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
       <img src="class_renders/Night Elf/hunter1.png" alt="hunter1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter1.png</div>
+    hunter1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
       <img src="class_renders/Night Elf/hunter2.png" alt="hunter2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter2.png</div>
+    hunter2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/hunter3.png" data-lightbox="class_renders" title="hunter3.png">
       <img src="class_renders/Night Elf/hunter3.png" alt="hunter3.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter3.png</div>
+    hunter3.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/priest.png" data-lightbox="class_renders" title="priest.png">
       <img src="class_renders/Night Elf/priest.png" alt="priest.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest.png</div>
+    priest.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/priest2.png" data-lightbox="class_renders" title="priest2.png">
       <img src="class_renders/Night Elf/priest2.png" alt="priest2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest2.png</div>
+    priest2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Night Elf/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Night Elf/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Night Elf/warrior.png" data-lightbox="class_renders" title="warrior.png">
       <img src="class_renders/Night Elf/warrior.png" alt="warrior.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior.png</div>
+    warrior.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Orcs</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
       <img src="class_renders/Orcs/hunter1.png" alt="hunter1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter1.png</div>
+    hunter1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
       <img src="class_renders/Orcs/hunter2.png" alt="hunter2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter2.png</div>
+    hunter2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Orcs/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Orcs/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
       <img src="class_renders/Orcs/shaman1.png" alt="shaman1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman1.png</div>
+    shaman1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
       <img src="class_renders/Orcs/shaman2.png" alt="shaman2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman2.png</div>
+    shaman2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/warlock.png" data-lightbox="class_renders" title="warlock.png">
       <img src="class_renders/Orcs/warlock.png" alt="warlock.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock.png</div>
+    warlock.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
       <img src="class_renders/Orcs/warlock2.png" alt="warlock2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock2.png</div>
+    warlock2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/warrior.png" data-lightbox="class_renders" title="warrior.png">
       <img src="class_renders/Orcs/warrior.png" alt="warrior.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior.png</div>
+    warrior.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Orcs/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Orcs/warrior3.png" data-lightbox="class_renders" title="warrior3.png">
       <img src="class_renders/Orcs/warrior3.png" alt="warrior3.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior3.png</div>
+    warrior3.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Tauren</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/druid1.png" data-lightbox="class_renders" title="druid1.png">
       <img src="class_renders/Tauren/druid1.png" alt="druid1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">druid1.png</div>
+    druid1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/druid2.png" data-lightbox="class_renders" title="druid2.png">
       <img src="class_renders/Tauren/druid2.png" alt="druid2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">druid2.png</div>
+    druid2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
       <img src="class_renders/Tauren/hunter1.png" alt="hunter1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter1.png</div>
+    hunter1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
       <img src="class_renders/Tauren/hunter2.png" alt="hunter2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter2.png</div>
+    hunter2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
       <img src="class_renders/Tauren/shaman1.png" alt="shaman1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman1.png</div>
+    shaman1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
       <img src="class_renders/Tauren/shaman2.png" alt="shaman2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman2.png</div>
+    shaman2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
       <img src="class_renders/Tauren/warrior1.png" alt="warrior1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior1.png</div>
+    warrior1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Tauren/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Tauren/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Undead</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/mage1.png" data-lightbox="class_renders" title="mage1.png">
       <img src="class_renders/Undead/mage1.png" alt="mage1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage1.png</div>
+    mage1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/mage2.png" data-lightbox="class_renders" title="mage2.png">
       <img src="class_renders/Undead/mage2.png" alt="mage2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage2.png</div>
+    mage2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/priest1.png" data-lightbox="class_renders" title="priest1.png">
       <img src="class_renders/Undead/priest1.png" alt="priest1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest1.png</div>
+    priest1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/priest2.png" data-lightbox="class_renders" title="priest2.png">
       <img src="class_renders/Undead/priest2.png" alt="priest2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest2.png</div>
+    priest2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Undead/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Undead/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/rogue3.png" data-lightbox="class_renders" title="rogue3.png">
       <img src="class_renders/Undead/rogue3.png" alt="rogue3.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue3.png</div>
+    rogue3.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/warlock.png" data-lightbox="class_renders" title="warlock.png">
       <img src="class_renders/Undead/warlock.png" alt="warlock.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock.png</div>
+    warlock.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
       <img src="class_renders/Undead/warlock2.png" alt="warlock2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock2.png</div>
+    warlock2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/warlock3.png" data-lightbox="class_renders" title="warlock3.png">
       <img src="class_renders/Undead/warlock3.png" alt="warlock3.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock3.png</div>
+    warlock3.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/warrior.png" data-lightbox="class_renders" title="warrior.png">
       <img src="class_renders/Undead/warrior.png" alt="warrior.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior.png</div>
+    warrior.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Undead/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Undead/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Dwarves</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
       <img src="class_renders/Dwarves/hunter1.png" alt="hunter1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter1.png</div>
+    hunter1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/mage1.png" data-lightbox="class_renders" title="mage1.png">
       <img src="class_renders/Dwarves/mage1.png" alt="mage1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage1.png</div>
+    mage1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/mage2.png" data-lightbox="class_renders" title="mage2.png">
       <img src="class_renders/Dwarves/mage2.png" alt="mage2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage2.png</div>
+    mage2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/paladin1.png" data-lightbox="class_renders" title="paladin1.png">
       <img src="class_renders/Dwarves/paladin1.png" alt="paladin1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">paladin1.png</div>
+    paladin1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/paladin2.png" data-lightbox="class_renders" title="paladin2.png">
       <img src="class_renders/Dwarves/paladin2.png" alt="paladin2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">paladin2.png</div>
+    paladin2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/preist1.png" data-lightbox="class_renders" title="preist1.png">
       <img src="class_renders/Dwarves/preist1.png" alt="preist1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">preist1.png</div>
+    preist1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/priest2.png" data-lightbox="class_renders" title="priest2.png">
       <img src="class_renders/Dwarves/priest2.png" alt="priest2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest2.png</div>
+    priest2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Dwarves/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Dwarves/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
       <img src="class_renders/Dwarves/warrior1.png" alt="warrior1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior1.png</div>
+    warrior1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Dwarves/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Dwarves/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Gnome</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/mage1.png" data-lightbox="class_renders" title="mage1.png">
       <img src="class_renders/Gnome/mage1.png" alt="mage1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage1.png</div>
+    mage1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/mage2.png" data-lightbox="class_renders" title="mage2.png">
       <img src="class_renders/Gnome/mage2.png" alt="mage2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage2.png</div>
+    mage2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/mage3.png" data-lightbox="class_renders" title="mage3.png">
       <img src="class_renders/Gnome/mage3.png" alt="mage3.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage3.png</div>
+    mage3.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Gnome/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Gnome/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
       <img src="class_renders/Gnome/warlock1.png" alt="warlock1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock1.png</div>
+    warlock1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
       <img src="class_renders/Gnome/warlock2.png" alt="warlock2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warlock2.png</div>
+    warlock2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
       <img src="class_renders/Gnome/warrior1.png" alt="warrior1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior1.png</div>
+    warrior1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Gnome/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Gnome/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
 </div>
 <div class="section-title" style="margin-top:10px; font-size:13px;">Trolls</div>
 <div class="gallery">
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
       <img src="class_renders/Trolls/hunter1.png" alt="hunter1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter1.png</div>
+    hunter1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
       <img src="class_renders/Trolls/hunter2.png" alt="hunter2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">hunter2.png</div>
+    hunter2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/mage1.png" data-lightbox="class_renders" title="mage1.png">
       <img src="class_renders/Trolls/mage1.png" alt="mage1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">mage1.png</div>
+    mage1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/priest1.png" data-lightbox="class_renders" title="priest1.png">
       <img src="class_renders/Trolls/priest1.png" alt="priest1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">priest1.png</div>
+    priest1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
       <img src="class_renders/Trolls/rogue1.png" alt="rogue1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue1.png</div>
+    rogue1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
       <img src="class_renders/Trolls/rogue2.png" alt="rogue2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">rogue2.png</div>
+    rogue2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
       <img src="class_renders/Trolls/shaman1.png" alt="shaman1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman1.png</div>
+    shaman1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
       <img src="class_renders/Trolls/shaman2.png" alt="shaman2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">shaman2.png</div>
+    shaman2.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
       <img src="class_renders/Trolls/warrior1.png" alt="warrior1.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior1.png</div>
+    warrior1.png
   </div>
-  <div style="text-align:center;">
+  <div class="gallery-item">
     <a href="class_renders/Trolls/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
       <img src="class_renders/Trolls/warrior2.png" alt="warrior2.png">
     </a>
-    <div style="font-size:10px; color:#AAA;">warrior2.png</div>
+    warrior2.png
   </div>
 </div>
 
-wowlogo.jpg" alt="wowlogo.jpg"></a>
-</div>
-<div id="html-images" class="section-title">📂 Html/Images</div>
-<div class="gallery">
-  <a href="html/images/header.jpg" data-lightbox="html-images" title="header.jpg"><img src="html/images/header.jpg" alt="header.jpg"></a>
-</div>
-
-<div class="footer" align="center">
-            World of Warcraft™ and Blizzard Entertainment™ are trademarks or registered trademarks of Blizzard Entertainment, Inc.<br>
-            This fan site is not affiliated with or endorsed by Blizzard Entertainment. Assets used under the original Fan Site Kit license.
-          </div>
-        </td>
-      </tr>
-    </table>
-  </center>
-</body>
-</html>
