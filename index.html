@@ -1,53 +1,235 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <html>
 <head>
-	<title>A World of Warcraft Fan Site</title>
+  <title>World of Warcraft Fan Site</title>
+  <style>
+    body {
+      background-color: black;
+      color: #D7CEA4;
+      font-family: Arial, sans-serif;
+    }
+    a { color: #FFB019; }
+    a:visited { color: #CFCFCF; }
+    .nav {
+      background-color: #1a1a1a;
+      padding: 10px;
+      width: 150px;
+    }
+    .nav a {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+    .section-title {
+      font-size: 14px;
+      color: white;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      border: 1px solid #555;
+      width: 180px;
+    }
+    .footer {
+      font-size: 10px;
+      color: #999;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 
-<body bgcolor = "black" text = "#D7CEA4" link="#FFB019" vlink="#CFCFCF">
+<body>
+  <center>
+    <img src="html/images/header.jpg" width="600" height="137" alt="Header">
 
+    <table cellpadding="5" cellspacing="0" border="0" width="850">
+      <tr>
+        <td valign="top" class="nav">
+          <font color="white"><b>Navigation</b></font><br>
+          <a href="#artwork">Artwork</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#humans">Humans</a>
+          <a href="#night-elf">Night Elves</a>
+          <a href="#orcs">Orcs</a>
+          <a href="#tauren">Tauren</a>
+          <a href="#undead">Undead</a>
+          <a href="#logos">Logos</a>
+          <a href="#html-images">Site Images</a>
+        </td>
 
-<img src = "html/images/header.jpg" width = "600" height = "137">
+        <td valign="top" width="680">
+          <!-- BEGIN FULL ASSET GALLERY -->
 
-<table cellpadding = "5" cellspacing = "0" border = "0" width = "600">
-<tr>
-	<td width = "100" valign = "top">
-		<font face = "arial" size = "2">
-			
-			<font color = "white"><b>Links:</b></font>
-			<br>
-			<a href = "http://www.blizzard.com">Link 1</a>
-			<br>
-			<a href = "html/images/header.jpg">Link 2</a>
+          <div id="artwork" class="section-title">📂 Artwork</div>
+          <div class="gallery">
+            <img src="artwork/alliance.jpg" alt="">
+            <img src="artwork/announcement.jpg" alt="">
+            <img src="artwork/darkportal.jpg" alt="">
+            <img src="artwork/gryphon.jpg" alt="">
+            <img src="artwork/HumanFemaleBackground.jpg" alt="">
+            <img src="artwork/ironforge.jpg" alt="">
+            <img src="artwork/nightelves.jpg" alt="">
+            <img src="artwork/stormwindmap.jpg" alt="">
+            <img src="artwork/tauren.jpg" alt="">
+          </div>
 
-		</font>
-	</td>
-	<td width = "500" valign = "top">
-		<font face = "arial" size = "2">
-			<font color = "white"><b>News Header - date/time</b></font>
-			<br>
-			Fans who are completely new to HTML can click View -> Souce from your browser pulldown menu to see and edit the source of this web page.  Obviously, you'll want to expand on this skeleton for your site, but you can use the basic HTML here as a starting point.
-		</font>
-	</td>
-</tr>
-<tr>
-	<td colspan = "2">
-	
-<br><br><br><br><br><br>
+          <div id="screenshots" class="section-title">📂 Screenshots</div>
+          <div class="gallery">
+            <img src="screenshots/Alliance-Gathering.jpg" alt="">
+            <img src="screenshots/Ancient-Protector.jpg" alt="">
+            <img src="screenshots/banking.jpg" alt="">
+            <img src="screenshots/batrider.jpg" alt="">
+            <img src="screenshots/bear.jpg" alt="">
+            <img src="screenshots/berry-hunting.jpg" alt="">
+            <img src="screenshots/Big-Fight.jpg" alt="">
+            <img src="screenshots/blackrock.jpg" alt="">
+            <img src="screenshots/blacksmithing.jpg" alt="">
+            <img src="screenshots/bloodring.jpg" alt="">
+            <img src="screenshots/campfire.jpg" alt="">
+            <img src="screenshots/Circle-of-Light.jpg" alt="">
+            <img src="screenshots/darkshire.jpg" alt="">
+            <img src="screenshots/darnassus.jpg" alt="">
+            <img src="screenshots/decaying-fish.jpg" alt="">
+            <img src="screenshots/divineshield.jpg" alt="">
+            <img src="screenshots/dragonspawn.jpg" alt="">
+            <img src="screenshots/Dwarf-in-Armor.jpg" alt="">
+            <img src="screenshots/Dwarves-on-Ram-Mounts.jpg" alt="">
+            <img src="screenshots/engineering.jpg" alt="">
+            <img src="screenshots/fight.jpg" alt="">
+            <img src="screenshots/Goblin-Shredder.jpg" alt="">
+            <img src="screenshots/Gryphon-Fly-by.jpg" alt="">
+            <img src="screenshots/gryphon.jpg" alt="">
+            <img src="screenshots/horse.jpg" alt="">
+            <img src="screenshots/hot-babes-at-the-tavern.jpg" alt="">
+            <img src="screenshots/instance.jpg" alt="">
+            <img src="screenshots/ironforge.jpg" alt="">
+            <img src="screenshots/lost-temple.jpg" alt="">
+            <img src="screenshots/meeting-at-the-bridge.jpg" alt="">
+            <img src="screenshots/Mountain-Giant.jpg" alt="">
+            <img src="screenshots/murlocs.jpg" alt="">
+            <img src="screenshots/Night-Elf-at-Fountain.jpg" alt="">
+            <img src="screenshots/Night-Elves-and-Mount.jpg" alt="">
+            <img src="screenshots/nightelfish.jpg" alt="">
+            <img src="screenshots/nightelves.jpg" alt="">
+            <img src="screenshots/nightmare.jpg" alt="">
+            <img src="screenshots/Ogre-Mage.jpg" alt="">
+            <img src="screenshots/On-Horseback.jpg" alt="">
+            <img src="screenshots/orgrimmar.jpg" alt="">
+            <img src="screenshots/pumpkin-patch.jpg" alt="">
+            <img src="screenshots/ram.jpg" alt="">
+            <img src="screenshots/Resurrection.jpg" alt="">
+            <img src="screenshots/shiny.jpg" alt="">
+            <img src="screenshots/stormwind-at-night.jpg" alt="">
+            <img src="screenshots/stormwind-at-night2.jpg" alt="">
+            <img src="screenshots/stormwind.jpg" alt="">
+            <img src="screenshots/throneroom.jpg" alt="">
+            <img src="screenshots/thunderbluff.jpg" alt="">
+            <img src="screenshots/troll-fight.jpg" alt="">
+            <img src="screenshots/Troll-on-Raptor-Mount.jpg" alt="">
+            <img src="screenshots/Undead-and-Mounts.jpg" alt="">
+            <img src="screenshots/Undead-Patrol.jpg" alt="">
+            <img src="screenshots/undead.jpg" alt="">
+            <img src="screenshots/undercity.jpg" alt="">
+            <img src="screenshots/wolf.jpg" alt="">
+            <img src="screenshots/wyvern.jpg" alt="">
+            <img src="screenshots/Wyverns-under-the-Bridge.jpg" alt="">
+          </div>
 
-<center>
-<font face = "arial" size = "1">
-World of Warcraft� and Blizzard Entertainment� are all trademarks or registered trademarks of Blizzard Entertainment in the United States and/or other countries. These terms and all related materials, logos, and images are copyright � Blizzard Entertainment. This site is in no way associated with or endorsed by Blizzard Entertainment�.
-</font>
-</center>	
-	
-	</td>
-</tr>
-</table>
+          <div id="humans" class="section-title">📂 Humans</div>
+          <div class="gallery">
+            <img src="class_renders/Humans/mage.png" alt="">
+            <img src="class_renders/Humans/mage2.png" alt="">
+            <img src="class_renders/Humans/paladin.png" alt="">
+            <img src="class_renders/Humans/priest.png" alt="">
+            <img src="class_renders/Humans/priest2.png" alt="">
+            <img src="class_renders/Humans/rogue.png" alt="">
+            <img src="class_renders/Humans/warlock1.png" alt="">
+            <img src="class_renders/Humans/warlock2.png" alt="">
+            <img src="class_renders/Humans/warrior.png" alt="">
+          </div>
 
+          <div id="night-elf" class="section-title">📂 Night Elf</div>
+          <div class="gallery">
+            <img src="class_renders/Night Elf/druid.png" alt="">
+            <img src="class_renders/Night Elf/druid2.png" alt="">
+            <img src="class_renders/Night Elf/hunter1.png" alt="">
+            <img src="class_renders/Night Elf/hunter2.png" alt="">
+            <img src="class_renders/Night Elf/hunter3.png" alt="">
+            <img src="class_renders/Night Elf/priest.png" alt="">
+            <img src="class_renders/Night Elf/priest2.png" alt="">
+            <img src="class_renders/Night Elf/rogue1.png" alt="">
+            <img src="class_renders/Night Elf/rogue2.png" alt="">
+            <img src="class_renders/Night Elf/warrior.png" alt="">
+          </div>
 
+          <div id="orcs" class="section-title">📂 Orcs</div>
+          <div class="gallery">
+            <img src="class_renders/Orcs/hunter1.png" alt="">
+            <img src="class_renders/Orcs/hunter2.png" alt="">
+            <img src="class_renders/Orcs/rogue1.png" alt="">
+            <img src="class_renders/Orcs/rogue2.png" alt="">
+            <img src="class_renders/Orcs/shaman1.png" alt="">
+            <img src="class_renders/Orcs/shaman2.png" alt="">
+            <img src="class_renders/Orcs/warlock.png" alt="">
+            <img src="class_renders/Orcs/warlock2.png" alt="">
+            <img src="class_renders/Orcs/warrior.png" alt="">
+            <img src="class_renders/Orcs/warrior2.png" alt="">
+            <img src="class_renders/Orcs/warrior3.png" alt="">
+          </div>
 
+          <div id="tauren" class="section-title">📂 Tauren</div>
+          <div class="gallery">
+            <img src="class_renders/Tauren/druid1.png" alt="">
+            <img src="class_renders/Tauren/druid2.png" alt="">
+            <img src="class_renders/Tauren/hunter1.png" alt="">
+            <img src="class_renders/Tauren/hunter2.png" alt="">
+            <img src="class_renders/Tauren/shaman1.png" alt="">
+            <img src="class_renders/Tauren/shaman2.png" alt="">
+            <img src="class_renders/Tauren/warrior1.png" alt="">
+            <img src="class_renders/Tauren/warrior2.png" alt="">
+          </div>
 
+          <div id="undead" class="section-title">📂 Undead</div>
+          <div class="gallery">
+            <img src="class_renders/Undead/mage1.png" alt="">
+            <img src="class_renders/Undead/mage2.png" alt="">
+            <img src="class_renders/Undead/priest1.png" alt="">
+            <img src="class_renders/Undead/priest2.png" alt="">
+            <img src="class_renders/Undead/rogue1.png" alt="">
+            <img src="class_renders/Undead/rogue2.png" alt="">
+            <img src="class_renders/Undead/rogue3.png" alt="">
+            <img src="class_renders/Undead/warlock.png" alt="">
+            <img src="class_renders/Undead/warlock2.png" alt="">
+            <img src="class_renders/Undead/warlock3.png" alt="">
+            <img src="class_renders/Undead/warrior.png" alt="">
+            <img src="class_renders/Undead/warrior2.png" alt="">
+          </div>
+
+          <div id="logos" class="section-title">📂 Logos</div>
+          <div class="gallery">
+            <img src="logos/blizzlogo.gif" alt="">
+            <img src="logos/wowlogo.jpg" alt="">
+          </div>
+
+          <div id="html-images" class="section-title">📂 Html Images</div>
+          <div class="gallery">
+            <img src="html/images/header.jpg" alt="">
+          </div>
+
+          <!-- END FULL ASSET GALLERY -->
+
+          <div class="footer" align="center">
+            World of Warcraft™ and Blizzard Entertainment™ are trademarks or registered trademarks of Blizzard Entertainment, Inc.<br>
+            This fan site is not affiliated with or endorsed by Blizzard Entertainment. Assets used under the original Fan Site Kit license.
+          </div>
+        </td>
+      </tr>
+    </table>
+  </center>
 </body>
 </html>
