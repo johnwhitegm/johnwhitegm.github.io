@@ -38,6 +38,41 @@
       overflow: hidden;
       border: 1px solid #555;
     }
+    
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-item {
+  width: 180px;
+  height: 210px;
+  text-align: center;
+  font-size: 9px;
+  color: #AAA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-item a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid #555;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #222;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px gold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
     .gallery img {
       width: 100%;
       height: 100%;
@@ -55,9 +90,9 @@
 <body>
   <center>
     <img src="html/images/header.jpg" width="600" height="137" alt="Header">
-    <table cellpadding="5" cellspacing="0" border="0" width="850">
+    <table cellpadding="5" cellspacing="0" border="0" width="100%" style="table-layout:fixed;">
       <tr>
-        <td valign="top" class="nav">
+        <td valign="top" class="nav" style="width:180px;">
           <font color="white"><b>Navigation</b></font><br>
           <a href="#artwork">Artwork</a>
           <a href="#html-images">Html/Images</a>
