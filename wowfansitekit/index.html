@@ -36,6 +36,32 @@ a:hover {
 .nav a {
   font-size: 12px;
 }
+@font-face {
+  font-family: 'Folkard';
+  src: url('assets/folkard.ttf') format('truetype');
+}
+
+.art-postcontent h1 {
+  font-family: 'Folkard', serif;
+  font-size: 38px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+
+  /* Prevent clipping */
+  padding-left: 6px;
+  padding-top: 6px;
+  line-height: 1.6;
+  overflow: visible;
+
+  /* Gradient */
+  background: -webkit-linear-gradient(top, #a06214 25%, #f0e636 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .content {
   flex-grow: 1;
@@ -80,23 +106,6 @@ a:hover {
   box-shadow: 0 0 10px gold;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.wow-banner-text {
-  font-family: 'Cinzel', serif;
-  font-size: 42px;
-  font-weight: bold;
-  background: linear-gradient(to bottom,
-    #fffad1,   /* pale gold/cream */
-    #ffe600 40%,
-    #f1b400 80%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    1px 1px 1px rgba(0, 0, 0, 0.5),
-    0 0 0 rgba(0, 0, 0, 0); /* subtle lift */
-  text-align: left;
-  margin: 20px 0;
-}
 .lightboxOverlay {
   background: rgba(0, 0, 0, 0.95) !important;
 }
@@ -131,12 +140,10 @@ a:hover {
     </div>
     <div class="content">
 
-<span class="wow-banner-text" style="text-align:left;"> W</span>elcome, adventurer! This site is a nostalgic tribute to the golden age of World of Warcraft. I'm glad you’ve found your way home. Lok'tar ogar!<br><br>
+<div class="art-postcontent"><h1>Welcome home, adventurer. Lok'tar ogar.</h1></div>
 
-While browsing the Wayback Machine for Classic WoW content, I <a href="https://web.archive.org/web/20040722042642/http://www.blizzard.com:80/wow/movies/#downloads" target="_blank" rel="noopener noreferrer">stumbled</a> across a "World of Warcraft Fan Site Kit" which was released in early 2004, many months before the official North American launch on November 23, 2004. There's also a <a href="https://web.archive.org/web/20071126115704/http://www.worldofwarcraft.com:80/wrath/downloads.xml" target="_blank" rel="noopener noreferrer">WotLK version</a> from 2007!<br>
-<br>
-Inspired by this discovery, I set out to build a website entirely from that very kit. The site you see here is drawn directly from those original assets of logos, artwork, screenshots, and templates. I have thoughtfully organized all the assets as a tribute to that era. This project is both a nostalgic homage and a preservation of the World of Warcraft Fan Site Kit itself. I hope you enjoy exploring it as much as I enjoyed bringing it to life.<br>
-<br>
+<p>I created this site to showcase the World of Warcraft Fan Site Kit. While not a fan site itself per se, it serves as a complete display of the kit’s contents. Every asset has been extracted and organized to show exactly what Blizzard offered to fans at the time. I hope you enjoy exploring it as much as I enjoyed putting it together.</p>
+
 For reference, Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div style="display: flex; align-items: flex-start; gap: 15px; margin: 20px 10px; max-width: 800px;">
   <img src="assets/fansitekit.jpg" alt="WoW Fan Site Kit" style="width: 150px; border: 1px solid #555;">
@@ -146,6 +153,16 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     <span style="color: #CFCFCF;"> [21.2 MB – ZIP]</span>
     <br>
     <em>The World of Warcraft Fan Site Kit is a package of materials designed to assist in the creation of your own WoW Fan Site. Specifically, the kit includes logos, hi-res artwork, screenshots, graphic PSD templates, a simple example of an HTML page, and a host of character cut-outs sorted by class. We hope you'll find this kit useful, and we look forward to seeing what you've created!</em>
+    <ul>
+  <li>World of Warcraft Fan Site Kit (2004):
+    <a href="assets/fansite_kit.zip" target="_blank">Download here</a> • 
+    <a href="https://web.archive.org/web/20040722042642/http://www.blizzard.com:80/wow/movies/#downloads" target="_blank">Archived website here</a>
+  </li>
+  <li>World of Warcraft Fan Site Kit (2007):
+    <a href="assets/WorldofWarcraft_Fansite_Kit_en-US.zip" target="_blank">Download here</a> • 
+    <a href="https://web.archive.org/web/20071126115704/http://www.worldofwarcraft.com:80/wrath/downloads.xml" target="_blank">Archived website here</a>
+  </li>
+</ul>
   </div>
 </div>
 
