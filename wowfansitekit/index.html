@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>World of Warcraft Fan Site</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <style>
@@ -9,6 +10,18 @@ body {
   background-color: black;
   color: #D7CEA4;
   font-family: Arial, sans-serif;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('artwork/gryphon.jpg');
+  background-size: fill;
+  background-position: center top;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* ✅ adjust this to control transparency */
+  z-index: -1;
 }
 a {
   color: #FFB019;
@@ -145,10 +158,29 @@ a:visited {
 .sub-link {
   margin-left: 40px; /* adjust indentation */
 }
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.footer-logos img {
+  height: 40px; /* Adjust as needed */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logos img:hover {
+  opacity: 1;
+}
+
 .footer {
   font-size: 10px;
   color: #999;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -157,11 +189,21 @@ a:visited {
     <img src="html/images/header.jpg" width="600" height="137" alt="Header">
   </center>
 
+<div class="for-alliance" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+  <img src="assets/foralliance.png" alt="For the Alliance"
+       style="height: 200px; width: auto; display: block;" />
+</div>
+
+<div class="for-horde" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+  <img src="assets/ogre.png" alt="Ogre" 
+       style="height: 200px; width: auto; display: block;" />
+</div>
+
 <div class="main"> <!-- start main  -->
 
-<div class="nav"> <!-- start nav  -->
+<div class="nav"style="margin-top: 100px;"> <!-- start nav  -->
     <a href="#artwork"><img src="assets/Artwork.gif" alt="Artwork"></a>
-    <a href="#class_renders"><img src="assets/ClassRenders.gif" alt="Class Renders"></a>
+    <a href="#class_renders-dwarves"><img src="assets/ClassRenders.gif" alt="Class Renders"></a>
     <a href="#html"><img src="assets/Html.gif" alt="Html"></a>
     <a href="#logos"><img src="assets/Logos.gif" alt="Logos"></a>
     <a href="#screenshots"><img src="assets/Screenshots.gif" alt="Screenshots"></a>
@@ -170,11 +212,11 @@ a:visited {
 
 <div class="content"> <!-- start content  -->
 
-<div class="art-postcontent"><h1>Welcome home, adventurer. Lok'tar ogar.</h1></div>
+<div class="art-postcontent"><h1>Welcome home, adventurer.</h1></div>
 
-<p>I created this site to showcase the World of Warcraft Fan Site Kit. It serves as a complete display of the kit’s contents. Every asset has been extracted and organized to show exactly what Blizzard offered to fans at the time. I hope you enjoy exploring it as much as I enjoyed putting it together.</p>
+<p>This site presents the full contents of the World of Warcraft Fan Site Kit. All assets are extracted and arranged just as Blizzard offered them. I hope you enjoy exploring it as much as I enjoyed putting it together.</p>
 
-Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
+The excerpt below is from Blizzard’s original announcement:<br>
 <div style="display: flex; align-items: flex-start; gap: 15px; margin: 20px 10px; max-width: 800px;">
   <img src="assets/fansitekit.jpg" alt="WoW Fan Site Kit" style="width: 150px; border: 1px solid #555;">
 
@@ -199,55 +241,55 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="artwork" class="art-postcontent">📂 Artwork</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="artwork/alliance.jpg" data-lightbox="artwork" data-title="alliance.jpg">
+    <a href="artwork/alliance.jpg" data-lightbox="wow"wow" data-title="alliance.jpg">
       <img src="artwork/alliance.jpg" alt="alliance.jpg">
     </a>
     alliance.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/announcement.jpg" data-lightbox="artwork" title="announcement.jpg">
+    <a href="artwork/announcement.jpg" data-lightbox="wow"wow" title="announcement.jpg">
       <img src="artwork/announcement.jpg" alt="announcement.jpg">
     </a>
     announcement.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/darkportal.jpg" data-lightbox="artwork" title="darkportal.jpg">
+    <a href="artwork/darkportal.jpg" data-lightbox="wow"wow" title="darkportal.jpg">
       <img src="artwork/darkportal.jpg" alt="darkportal.jpg">
     </a>
     darkportal.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/gryphon.jpg" data-lightbox="artwork" title="gryphon.jpg">
+    <a href="artwork/gryphon.jpg" data-lightbox="wow"wow" title="gryphon.jpg">
       <img src="artwork/gryphon.jpg" alt="gryphon.jpg">
     </a>
     gryphon.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/HumanFemaleBackground.jpg" data-lightbox="artwork" title="HumanFemaleBackground.jpg">
+    <a href="artwork/HumanFemaleBackground.jpg" data-lightbox="wow"artwork" title="HumanFemaleBackground.jpg">
       <img src="artwork/HumanFemaleBackground.jpg" alt="HumanFemaleBackground.jpg">
     </a>
     HumanFemaleBackground.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/ironforge.jpg" data-lightbox="artwork" title="ironforge.jpg">
+    <a href="artwork/ironforge.jpg" data-lightbox="wow"artwork" title="ironforge.jpg">
       <img src="artwork/ironforge.jpg" alt="ironforge.jpg">
     </a>
     ironforge.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/nightelves.jpg" data-lightbox="artwork" title="nightelves.jpg">
+    <a href="artwork/nightelves.jpg" data-lightbox="wow"artwork" title="nightelves.jpg">
       <img src="artwork/nightelves.jpg" alt="nightelves.jpg">
     </a>
     nightelves.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/stormwindmap.jpg" data-lightbox="artwork" title="stormwindmap.jpg">
+    <a href="artwork/stormwindmap.jpg" data-lightbox="wow"artwork" title="stormwindmap.jpg">
       <img src="artwork/stormwindmap.jpg" alt="stormwindmap.jpg">
     </a>
     stormwindmap.jpg
   </div>
   <div class="gallery-item">
-    <a href="artwork/tauren.jpg" data-lightbox="artwork" title="tauren.jpg">
+    <a href="artwork/tauren.jpg" data-lightbox="wow"artwork" title="tauren.jpg">
       <img src="artwork/tauren.jpg" alt="tauren.jpg">
     </a>
     tauren.jpg
@@ -258,67 +300,67 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-dwarves" class="art-postcontent">📂 Class Renders > 📂 Dwarves</div>
 <div class="gallery"> <!-- start Dwarve gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+    <a href="class_renders/Dwarves/hunter1.png" data-lightbox="wow"class_renders" title="hunter1.png">
       <img src="class_renders/Dwarves/hunter1.png" alt="hunter1.png">
     </a>
     hunter1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/mage1.png" data-lightbox="class_renders" title="mage1.png">
+    <a href="class_renders/Dwarves/mage1.png" data-lightbox="wow"class_renders" title="mage1.png">
       <img src="class_renders/Dwarves/mage1.png" alt="mage1.png">
     </a>
     mage1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/mage2.png" data-lightbox="class_renders" title="mage2.png">
+    <a href="class_renders/Dwarves/mage2.png" data-lightbox="wow"class_renders" title="mage2.png">
       <img src="class_renders/Dwarves/mage2.png" alt="mage2.png">
     </a>
     mage2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/paladin1.png" data-lightbox="class_renders" title="paladin1.png">
+    <a href="class_renders/Dwarves/paladin1.png" data-lightbox="wow"class_renders" title="paladin1.png">
       <img src="class_renders/Dwarves/paladin1.png" alt="paladin1.png">
     </a>
     paladin1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/paladin2.png" data-lightbox="class_renders" title="paladin2.png">
+    <a href="class_renders/Dwarves/paladin2.png" data-lightbox="wow"class_renders" title="paladin2.png">
       <img src="class_renders/Dwarves/paladin2.png" alt="paladin2.png">
     </a>
     paladin2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/preist1.png" data-lightbox="class_renders" title="preist1.png">
+    <a href="class_renders/Dwarves/preist1.png" data-lightbox="wow"class_renders" title="preist1.png">
       <img src="class_renders/Dwarves/preist1.png" alt="preist1.png">
     </a>
     preist1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/priest2.png" data-lightbox="class_renders" title="priest2.png">
+    <a href="class_renders/Dwarves/priest2.png" data-lightbox="wow"class_renders" title="priest2.png">
       <img src="class_renders/Dwarves/priest2.png" alt="priest2.png">
     </a>
     priest2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Dwarves/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Dwarves/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Dwarves/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Dwarves/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+    <a href="class_renders/Dwarves/warrior1.png" data-lightbox="wow"class_renders" title="warrior1.png">
       <img src="class_renders/Dwarves/warrior1.png" alt="warrior1.png">
     </a>
     warrior1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Dwarves/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Dwarves/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Dwarves/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
@@ -329,55 +371,55 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-gnome" class="art-postcontent">📂 Class Renders > 📂 Gnome</div>
 <div class="gallery"> <!-- start Gnome gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Gnome/mage1.png" data-lightbox="class_renders" title="mage1.png">
+    <a href="class_renders/Gnome/mage1.png" data-lightbox="wow"class_renders" title="mage1.png">
       <img src="class_renders/Gnome/mage1.png" alt="mage1.png">
     </a>
     mage1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/mage2.png" data-lightbox="class_renders" title="mage2.png">
+    <a href="class_renders/Gnome/mage2.png" data-lightbox="wow"class_renders" title="mage2.png">
       <img src="class_renders/Gnome/mage2.png" alt="mage2.png">
     </a>
     mage2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/mage3.png" data-lightbox="class_renders" title="mage3.png">
+    <a href="class_renders/Gnome/mage3.png" data-lightbox="wow"class_renders" title="mage3.png">
       <img src="class_renders/Gnome/mage3.png" alt="mage3.png">
     </a>
     mage3.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Gnome/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Gnome/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Gnome/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Gnome/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
+    <a href="class_renders/Gnome/warlock1.png" data-lightbox="wow"class_renders" title="warlock1.png">
       <img src="class_renders/Gnome/warlock1.png" alt="warlock1.png">
     </a>
     warlock1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+    <a href="class_renders/Gnome/warlock2.png" data-lightbox="wow"class_renders" title="warlock2.png">
       <img src="class_renders/Gnome/warlock2.png" alt="warlock2.png">
     </a>
     warlock2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+    <a href="class_renders/Gnome/warrior1.png" data-lightbox="wow"class_renders" title="warrior1.png">
       <img src="class_renders/Gnome/warrior1.png" alt="warrior1.png">
     </a>
     warrior1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Gnome/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Gnome/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Gnome/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
@@ -388,55 +430,55 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-humans" class="art-postcontent">📂 Class Renders > 📂 Humans</div>
 <div class="gallery"> <!-- start Human gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Humans/mage.png" data-lightbox="class_renders" title="mage.png">
+    <a href="class_renders/Humans/mage.png" data-lightbox="wow"class_renders" title="mage.png">
       <img src="class_renders/Humans/mage.png" alt="mage.png">
     </a>
     mage.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/mage2.png" data-lightbox="class_renders" title="mage2.png">
+    <a href="class_renders/Humans/mage2.png" data-lightbox="wow"class_renders" title="mage2.png">
       <img src="class_renders/Humans/mage2.png" alt="mage2.png">
     </a>
     mage2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/paladin.png" data-lightbox="class_renders" title="paladin.png">
+    <a href="class_renders/Humans/paladin.png" data-lightbox="wow"class_renders" title="paladin.png">
       <img src="class_renders/Humans/paladin.png" alt="paladin.png">
     </a>
     paladin.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/priest.png" data-lightbox="class_renders" title="priest.png">
+    <a href="class_renders/Humans/priest.png" data-lightbox="wow"class_renders" title="priest.png">
       <img src="class_renders/Humans/priest.png" alt="priest.png">
     </a>
     priest.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/priest2.png" data-lightbox="class_renders" title="priest2.png">
+    <a href="class_renders/Humans/priest2.png" data-lightbox="wow"class_renders" title="priest2.png">
       <img src="class_renders/Humans/priest2.png" alt="priest2.png">
     </a>
     priest2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/rogue.png" data-lightbox="class_renders" title="rogue.png">
+    <a href="class_renders/Humans/rogue.png" data-lightbox="wow"class_renders" title="rogue.png">
       <img src="class_renders/Humans/rogue.png" alt="rogue.png">
     </a>
     rogue.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
+    <a href="class_renders/Humans/warlock1.png" data-lightbox="wow"class_renders" title="warlock1.png">
       <img src="class_renders/Humans/warlock1.png" alt="warlock1.png">
     </a>
     warlock1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+    <a href="class_renders/Humans/warlock2.png" data-lightbox="wow"class_renders" title="warlock2.png">
       <img src="class_renders/Humans/warlock2.png" alt="warlock2.png">
     </a>
     warlock2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Humans/warrior.png" data-lightbox="class_renders" title="warrior.png">
+    <a href="class_renders/Humans/warrior.png" data-lightbox="wow"class_renders" title="warrior.png">
       <img src="class_renders/Humans/warrior.png" alt="warrior.png">
     </a>
     warrior.png
@@ -447,61 +489,61 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-night elf" class="art-postcontent">📂 Class Renders > 📂 Night Elf</div>
 <div class="gallery"> <!-- start Night Elf gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/druid.png" data-lightbox="class_renders" title="druid.png">
+    <a href="class_renders/Night Elf/druid.png" data-lightbox="wow"class_renders" title="druid.png">
       <img src="class_renders/Night Elf/druid.png" alt="druid.png">
     </a>
     druid.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/druid2.png" data-lightbox="class_renders" title="druid2.png">
+    <a href="class_renders/Night Elf/druid2.png" data-lightbox="wow"class_renders" title="druid2.png">
       <img src="class_renders/Night Elf/druid2.png" alt="druid2.png">
     </a>
     druid2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+    <a href="class_renders/Night Elf/hunter1.png" data-lightbox="wow"class_renders" title="hunter1.png">
       <img src="class_renders/Night Elf/hunter1.png" alt="hunter1.png">
     </a>
     hunter1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+    <a href="class_renders/Night Elf/hunter2.png" data-lightbox="wow"class_renders" title="hunter2.png">
       <img src="class_renders/Night Elf/hunter2.png" alt="hunter2.png">
     </a>
     hunter2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter3.png" data-lightbox="class_renders" title="hunter3.png">
+    <a href="class_renders/Night Elf/hunter3.png" data-lightbox="wow"class_renders" title="hunter3.png">
       <img src="class_renders/Night Elf/hunter3.png" alt="hunter3.png">
     </a>
     hunter3.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/priest.png" data-lightbox="class_renders" title="priest.png">
+    <a href="class_renders/Night Elf/priest.png" data-lightbox="wow"class_renders" title="priest.png">
       <img src="class_renders/Night Elf/priest.png" alt="priest.png">
     </a>
     priest.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/priest2.png" data-lightbox="class_renders" title="priest2.png">
+    <a href="class_renders/Night Elf/priest2.png" data-lightbox="wow"class_renders" title="priest2.png">
       <img src="class_renders/Night Elf/priest2.png" alt="priest2.png">
     </a>
     priest2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Night Elf/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Night Elf/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Night Elf/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Night Elf/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Night Elf/warrior.png" data-lightbox="class_renders" title="warrior.png">
+    <a href="class_renders/Night Elf/warrior.png" data-lightbox="wow"class_renders" title="warrior.png">
       <img src="class_renders/Night Elf/warrior.png" alt="warrior.png">
     </a>
     warrior.png
@@ -512,67 +554,67 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-orcs" class="art-postcontent">📂 Class Renders > 📂 Orcs</div>
 <div class="gallery"> <!-- start Orcs gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Orcs/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+    <a href="class_renders/Orcs/hunter1.png" data-lightbox="wow"class_renders" title="hunter1.png">
       <img src="class_renders/Orcs/hunter1.png" alt="hunter1.png">
     </a>
     hunter1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+    <a href="class_renders/Orcs/hunter2.png" data-lightbox="wow"class_renders" title="hunter2.png">
       <img src="class_renders/Orcs/hunter2.png" alt="hunter2.png">
     </a>
     hunter2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Orcs/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Orcs/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Orcs/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Orcs/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+    <a href="class_renders/Orcs/shaman1.png" data-lightbox="wow"class_renders" title="shaman1.png">
       <img src="class_renders/Orcs/shaman1.png" alt="shaman1.png">
     </a>
     shaman1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+    <a href="class_renders/Orcs/shaman2.png" data-lightbox="wow"class_renders" title="shaman2.png">
       <img src="class_renders/Orcs/shaman2.png" alt="shaman2.png">
     </a>
     shaman2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/warlock.png" data-lightbox="class_renders" title="warlock.png">
+    <a href="class_renders/Orcs/warlock.png" data-lightbox="wow"class_renders" title="warlock.png">
       <img src="class_renders/Orcs/warlock.png" alt="warlock.png">
     </a>
     warlock.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+    <a href="class_renders/Orcs/warlock2.png" data-lightbox="wow"class_renders" title="warlock2.png">
       <img src="class_renders/Orcs/warlock2.png" alt="warlock2.png">
     </a>
     warlock2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior.png" data-lightbox="class_renders" title="warrior.png">
+    <a href="class_renders/Orcs/warrior.png" data-lightbox="wow"class_renders" title="warrior.png">
       <img src="class_renders/Orcs/warrior.png" alt="warrior.png">
     </a>
     warrior.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Orcs/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Orcs/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior3.png" data-lightbox="class_renders" title="warrior3.png">
+    <a href="class_renders/Orcs/warrior3.png" data-lightbox="wow"class_renders" title="warrior3.png">
       <img src="class_renders/Orcs/warrior3.png" alt="warrior3.png">
     </a>
     warrior3.png
@@ -583,49 +625,49 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-tauren" class="art-postcontent">📂 Class Renders > 📂 Tauren</div>
 <div class="gallery"> <!-- start Tauren gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Tauren/druid1.png" data-lightbox="class_renders" title="druid1.png">
+    <a href="class_renders/Tauren/druid1.png" data-lightbox="wow"class_renders" title="druid1.png">
       <img src="class_renders/Tauren/druid1.png" alt="druid1.png">
     </a>
     druid1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/druid2.png" data-lightbox="class_renders" title="druid2.png">
+    <a href="class_renders/Tauren/druid2.png" data-lightbox="wow"class_renders" title="druid2.png">
       <img src="class_renders/Tauren/druid2.png" alt="druid2.png">
     </a>
     druid2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+    <a href="class_renders/Tauren/hunter1.png" data-lightbox="wow"class_renders" title="hunter1.png">
       <img src="class_renders/Tauren/hunter1.png" alt="hunter1.png">
     </a>
     hunter1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+    <a href="class_renders/Tauren/hunter2.png" data-lightbox="wow"class_renders" title="hunter2.png">
       <img src="class_renders/Tauren/hunter2.png" alt="hunter2.png">
     </a>
     hunter2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+    <a href="class_renders/Tauren/shaman1.png" data-lightbox="wow"class_renders" title="shaman1.png">
       <img src="class_renders/Tauren/shaman1.png" alt="shaman1.png">
     </a>
     shaman1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+    <a href="class_renders/Tauren/shaman2.png" data-lightbox="wow"class_renders" title="shaman2.png">
       <img src="class_renders/Tauren/shaman2.png" alt="shaman2.png">
     </a>
     shaman2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+    <a href="class_renders/Tauren/warrior1.png" data-lightbox="wow"class_renders" title="warrior1.png">
       <img src="class_renders/Tauren/warrior1.png" alt="warrior1.png">
     </a>
     warrior1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Tauren/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Tauren/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Tauren/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
@@ -636,61 +678,61 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-trolls" class="art-postcontent">📂 Class Renders > 📂 Trolls</div>
 <div class="gallery"> <!-- start Troll gallery  -->
   <div class="gallery-item">
-    <a href="class_renders/Trolls/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+    <a href="class_renders/Trolls/hunter1.png" data-lightbox="wow"class_renders" title="hunter1.png">
       <img src="class_renders/Trolls/hunter1.png" alt="hunter1.png">
     </a>
     hunter1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+    <a href="class_renders/Trolls/hunter2.png" data-lightbox="wow"class_renders" title="hunter2.png">
       <img src="class_renders/Trolls/hunter2.png" alt="hunter2.png">
     </a>
     hunter2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/mage1.png" data-lightbox="class_renders" title="mage1.png">
+    <a href="class_renders/Trolls/mage1.png" data-lightbox="wow"class_renders" title="mage1.png">
       <img src="class_renders/Trolls/mage1.png" alt="mage1.png">
     </a>
     mage1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/priest1.png" data-lightbox="class_renders" title="priest1.png">
+    <a href="class_renders/Trolls/priest1.png" data-lightbox="wow"class_renders" title="priest1.png">
       <img src="class_renders/Trolls/priest1.png" alt="priest1.png">
     </a>
     priest1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Trolls/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Trolls/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Trolls/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Trolls/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+    <a href="class_renders/Trolls/shaman1.png" data-lightbox="wow"class_renders" title="shaman1.png">
       <img src="class_renders/Trolls/shaman1.png" alt="shaman1.png">
     </a>
     shaman1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+    <a href="class_renders/Trolls/shaman2.png" data-lightbox="wow"class_renders" title="shaman2.png">
       <img src="class_renders/Trolls/shaman2.png" alt="shaman2.png">
     </a>
     shaman2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+    <a href="class_renders/Trolls/warrior1.png" data-lightbox="wow"class_renders" title="warrior1.png">
       <img src="class_renders/Trolls/warrior1.png" alt="warrior1.png">
     </a>
     warrior1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Trolls/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Trolls/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Trolls/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
@@ -701,73 +743,73 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="class_renders-undead" class="art-postcontent">📂 Class Renders > 📂 Undead</div>
 <div class="gallery">
   <div class="gallery-item"> <!-- start Undead gallery  -->
-    <a href="class_renders/Undead/mage1.png" data-lightbox="class_renders" title="mage1.png">
+    <a href="class_renders/Undead/mage1.png" data-lightbox="wow"class_renders" title="mage1.png">
       <img src="class_renders/Undead/mage1.png" alt="mage1.png">
     </a>
     mage1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/mage2.png" data-lightbox="class_renders" title="mage2.png">
+    <a href="class_renders/Undead/mage2.png" data-lightbox="wow"class_renders" title="mage2.png">
       <img src="class_renders/Undead/mage2.png" alt="mage2.png">
     </a>
     mage2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/priest1.png" data-lightbox="class_renders" title="priest1.png">
+    <a href="class_renders/Undead/priest1.png" data-lightbox="wow"class_renders" title="priest1.png">
       <img src="class_renders/Undead/priest1.png" alt="priest1.png">
     </a>
     priest1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/priest2.png" data-lightbox="class_renders" title="priest2.png">
+    <a href="class_renders/Undead/priest2.png" data-lightbox="wow"class_renders" title="priest2.png">
       <img src="class_renders/Undead/priest2.png" alt="priest2.png">
     </a>
     priest2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+    <a href="class_renders/Undead/rogue1.png" data-lightbox="wow"class_renders" title="rogue1.png">
       <img src="class_renders/Undead/rogue1.png" alt="rogue1.png">
     </a>
     rogue1.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+    <a href="class_renders/Undead/rogue2.png" data-lightbox="wow"class_renders" title="rogue2.png">
       <img src="class_renders/Undead/rogue2.png" alt="rogue2.png">
     </a>
     rogue2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/rogue3.png" data-lightbox="class_renders" title="rogue3.png">
+    <a href="class_renders/Undead/rogue3.png" data-lightbox="wow"class_renders" title="rogue3.png">
       <img src="class_renders/Undead/rogue3.png" alt="rogue3.png">
     </a>
     rogue3.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/warlock.png" data-lightbox="class_renders" title="warlock.png">
+    <a href="class_renders/Undead/warlock.png" data-lightbox="wow"class_renders" title="warlock.png">
       <img src="class_renders/Undead/warlock.png" alt="warlock.png">
     </a>
     warlock.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+    <a href="class_renders/Undead/warlock2.png" data-lightbox="wow"class_renders" title="warlock2.png">
       <img src="class_renders/Undead/warlock2.png" alt="warlock2.png">
     </a>
     warlock2.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/warlock3.png" data-lightbox="class_renders" title="warlock3.png">
+    <a href="class_renders/Undead/warlock3.png" data-lightbox="wow"class_renders" title="warlock3.png">
       <img src="class_renders/Undead/warlock3.png" alt="warlock3.png">
     </a>
     warlock3.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/warrior.png" data-lightbox="class_renders" title="warrior.png">
+    <a href="class_renders/Undead/warrior.png" data-lightbox="wow"class_renders" title="warrior.png">
       <img src="class_renders/Undead/warrior.png" alt="warrior.png">
     </a>
     warrior.png
   </div>
   <div class="gallery-item">
-    <a href="class_renders/Undead/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+    <a href="class_renders/Undead/warrior2.png" data-lightbox="wow"class_renders" title="warrior2.png">
       <img src="class_renders/Undead/warrior2.png" alt="warrior2.png">
     </a>
     warrior2.png
@@ -777,7 +819,7 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="html" class="art-postcontent">📂 Html > 📂 Images</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="html/images/header.jpg" data-lightbox="html-images" title="header.jpg">
+    <a href="html/images/header.jpg" data-lightbox="wow"html-images" title="header.jpg">
       <img src="html/images/header.jpg" alt="header.jpg">
     </a>
     header.jpg
@@ -787,25 +829,25 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="logos" class="art-postcontent">📂 Logos</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="logos/blizzlogo.gif" data-lightbox="logos" title="blizzlogo.gif">
+    <a href="logos/blizzlogo.gif" data-lightbox="wow"logos" title="blizzlogo.gif">
       <img src="logos/blizzlogo.gif" alt="blizzlogo.gif">
     </a>
     blizzlogo.gif
   </div>
     <div class="gallery-item">
-    <a href="logos/Blizzard-logo(psd).jpg" data-lightbox="logos" title="Blizzard-logo(psd).jpg">
+    <a href="logos/Blizzard-logo(psd).jpg" data-lightbox="wow"logos" title="Blizzard-logo(psd).jpg">
       <img src="logos/Blizzard-logo(psd).jpg" alt="Blizzard-logo(psd).jpg">
     </a>
     Blizzard-logo(psd).jpg
   </div>
   <div class="gallery-item">
-    <a href="logos/wowlogo.jpg" data-lightbox="logos" title="wowlogo.jpg">
+    <a href="logos/wowlogo.jpg" data-lightbox="wow"logos" title="wowlogo.jpg">
       <img src="logos/wowlogo.jpg" alt="wowlogo.jpg">
     </a>
     wowlogo.jpg
   </div>
     <div class="gallery-item">
-    <a href="logos/WoWlogo(psd).jpg" data-lightbox="logos" title="WoWlogo(psd).jpg">
+    <a href="logos/WoWlogo(psd).jpg" data-lightbox="wow"logos" title="WoWlogo(psd).jpg">
       <img src="logos/WoWlogo(psd).jpg" alt="WoWlogo(psd).jpg">
     </a>
     WoWlogo(psd).jpg
@@ -815,349 +857,349 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="screenshots" class="art-postcontent">📂 Screenshots</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="screenshots/Alliance-Gathering.jpg" data-lightbox="screenshots" title="Alliance-Gathering.jpg">
+    <a href="screenshots/Alliance-Gathering.jpg" data-lightbox="wow"screenshots" title="Alliance-Gathering.jpg">
       <img src="screenshots/Alliance-Gathering.jpg" alt="Alliance-Gathering.jpg">
     </a>
     Alliance-Gathering.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Ancient-Protector.jpg" data-lightbox="screenshots" title="Ancient-Protector.jpg">
+    <a href="screenshots/Ancient-Protector.jpg" data-lightbox="wow"screenshots" title="Ancient-Protector.jpg">
       <img src="screenshots/Ancient-Protector.jpg" alt="Ancient-Protector.jpg">
     </a>
     Ancient-Protector.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/banking.jpg" data-lightbox="screenshots" title="banking.jpg">
+    <a href="screenshots/banking.jpg" data-lightbox="wow"screenshots" title="banking.jpg">
       <img src="screenshots/banking.jpg" alt="banking.jpg">
     </a>
     banking.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/batrider.jpg" data-lightbox="screenshots" title="batrider.jpg">
+    <a href="screenshots/batrider.jpg" data-lightbox="wow"screenshots" title="batrider.jpg">
       <img src="screenshots/batrider.jpg" alt="batrider.jpg">
     </a>
     batrider.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/bear.jpg" data-lightbox="screenshots" title="bear.jpg">
+    <a href="screenshots/bear.jpg" data-lightbox="wow"screenshots" title="bear.jpg">
       <img src="screenshots/bear.jpg" alt="bear.jpg">
     </a>
     bear.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/berry-hunting.jpg" data-lightbox="screenshots" title="berry-hunting.jpg">
+    <a href="screenshots/berry-hunting.jpg" data-lightbox="wow"screenshots" title="berry-hunting.jpg">
       <img src="screenshots/berry-hunting.jpg" alt="berry-hunting.jpg">
     </a>
     berry-hunting.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Big-Fight.jpg" data-lightbox="screenshots" title="Big-Fight.jpg">
+    <a href="screenshots/Big-Fight.jpg" data-lightbox="wow"screenshots" title="Big-Fight.jpg">
       <img src="screenshots/Big-Fight.jpg" alt="Big-Fight.jpg">
     </a>
     Big-Fight.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/blackrock.jpg" data-lightbox="screenshots" title="blackrock.jpg">
+    <a href="screenshots/blackrock.jpg" data-lightbox="wow"screenshots" title="blackrock.jpg">
       <img src="screenshots/blackrock.jpg" alt="blackrock.jpg">
     </a>
     blackrock.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/blacksmithing.jpg" data-lightbox="screenshots" title="blacksmithing.jpg">
+    <a href="screenshots/blacksmithing.jpg" data-lightbox="wow"screenshots" title="blacksmithing.jpg">
       <img src="screenshots/blacksmithing.jpg" alt="blacksmithing.jpg">
     </a>
     blacksmithing.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/bloodring.jpg" data-lightbox="screenshots" title="bloodring.jpg">
+    <a href="screenshots/bloodring.jpg" data-lightbox="wow"screenshots" title="bloodring.jpg">
       <img src="screenshots/bloodring.jpg" alt="bloodring.jpg">
     </a>
     bloodring.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/campfire.jpg" data-lightbox="screenshots" title="campfire.jpg">
+    <a href="screenshots/campfire.jpg" data-lightbox="wow"screenshots" title="campfire.jpg">
       <img src="screenshots/campfire.jpg" alt="campfire.jpg">
     </a>
     campfire.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Circle-of-Light.jpg" data-lightbox="screenshots" title="Circle-of-Light.jpg">
+    <a href="screenshots/Circle-of-Light.jpg" data-lightbox="wow"screenshots" title="Circle-of-Light.jpg">
       <img src="screenshots/Circle-of-Light.jpg" alt="Circle-of-Light.jpg">
     </a>
     Circle-of-Light.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/darkshire.jpg" data-lightbox="screenshots" title="darkshire.jpg">
+    <a href="screenshots/darkshire.jpg" data-lightbox="wow"screenshots" title="darkshire.jpg">
       <img src="screenshots/darkshire.jpg" alt="darkshire.jpg">
     </a>
     darkshire.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/darnassus.jpg" data-lightbox="screenshots" title="darnassus.jpg">
+    <a href="screenshots/darnassus.jpg" data-lightbox="wow"screenshots" title="darnassus.jpg">
       <img src="screenshots/darnassus.jpg" alt="darnassus.jpg">
     </a>
     darnassus.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/decaying-fish.jpg" data-lightbox="screenshots" title="decaying-fish.jpg">
+    <a href="screenshots/decaying-fish.jpg" data-lightbox="wow"screenshots" title="decaying-fish.jpg">
       <img src="screenshots/decaying-fish.jpg" alt="decaying-fish.jpg">
     </a>
     decaying-fish.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/divineshield.jpg" data-lightbox="screenshots" title="divineshield.jpg">
+    <a href="screenshots/divineshield.jpg" data-lightbox="wow"screenshots" title="divineshield.jpg">
       <img src="screenshots/divineshield.jpg" alt="divineshield.jpg">
     </a>
     divineshield.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/dragonspawn.jpg" data-lightbox="screenshots" title="dragonspawn.jpg">
+    <a href="screenshots/dragonspawn.jpg" data-lightbox="wow"screenshots" title="dragonspawn.jpg">
       <img src="screenshots/dragonspawn.jpg" alt="dragonspawn.jpg">
     </a>
     dragonspawn.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Dwarf-in-Armor.jpg" data-lightbox="screenshots" title="Dwarf-in-Armor.jpg">
+    <a href="screenshots/Dwarf-in-Armor.jpg" data-lightbox="wow"screenshots" title="Dwarf-in-Armor.jpg">
       <img src="screenshots/Dwarf-in-Armor.jpg" alt="Dwarf-in-Armor.jpg">
     </a>
     Dwarf-in-Armor.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Dwarves-on-Ram-Mounts.jpg" data-lightbox="screenshots" title="Dwarves-on-Ram-Mounts.jpg">
+    <a href="screenshots/Dwarves-on-Ram-Mounts.jpg" data-lightbox="wow"screenshots" title="Dwarves-on-Ram-Mounts.jpg">
       <img src="screenshots/Dwarves-on-Ram-Mounts.jpg" alt="Dwarves-on-Ram-Mounts.jpg">
     </a>
     Dwarves-on-Ram-Mounts.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/engineering.jpg" data-lightbox="screenshots" title="engineering.jpg">
+    <a href="screenshots/engineering.jpg" data-lightbox="wow"screenshots" title="engineering.jpg">
       <img src="screenshots/engineering.jpg" alt="engineering.jpg">
     </a>
     engineering.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/fight.jpg" data-lightbox="screenshots" title="fight.jpg">
+    <a href="screenshots/fight.jpg" data-lightbox="wow"screenshots" title="fight.jpg">
       <img src="screenshots/fight.jpg" alt="fight.jpg">
     </a>
     fight.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Goblin-Shredder.jpg" data-lightbox="screenshots" title="Goblin-Shredder.jpg">
+    <a href="screenshots/Goblin-Shredder.jpg" data-lightbox="wow"screenshots" title="Goblin-Shredder.jpg">
       <img src="screenshots/Goblin-Shredder.jpg" alt="Goblin-Shredder.jpg">
     </a>
     Goblin-Shredder.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Gryphon-Fly-by.jpg" data-lightbox="screenshots" title="Gryphon-Fly-by.jpg">
+    <a href="screenshots/Gryphon-Fly-by.jpg" data-lightbox="wow"screenshots" title="Gryphon-Fly-by.jpg">
       <img src="screenshots/Gryphon-Fly-by.jpg" alt="Gryphon-Fly-by.jpg">
     </a>
     Gryphon-Fly-by.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/gryphon.jpg" data-lightbox="screenshots" title="gryphon.jpg">
+    <a href="screenshots/gryphon.jpg" data-lightbox="wow"screenshots" title="gryphon.jpg">
       <img src="screenshots/gryphon.jpg" alt="gryphon.jpg">
     </a>
     gryphon.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/horse.jpg" data-lightbox="screenshots" title="horse.jpg">
+    <a href="screenshots/horse.jpg" data-lightbox="wow"screenshots" title="horse.jpg">
       <img src="screenshots/horse.jpg" alt="horse.jpg">
     </a>
     horse.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/hot-babes-at-the-tavern.jpg" data-lightbox="screenshots" title="hot-babes-at-the-tavern.jpg">
+    <a href="screenshots/hot-babes-at-the-tavern.jpg" data-lightbox="wow"screenshots" title="hot-babes-at-the-tavern.jpg">
       <img src="screenshots/hot-babes-at-the-tavern.jpg" alt="hot-babes-at-the-tavern.jpg">
     </a>
     hot-babes-at-the-tavern.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/instance.jpg" data-lightbox="screenshots" title="instance.jpg">
+    <a href="screenshots/instance.jpg" data-lightbox="wow"screenshots" title="instance.jpg">
       <img src="screenshots/instance.jpg" alt="instance.jpg">
     </a>
     instance.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/ironforge.jpg" data-lightbox="screenshots" title="ironforge.jpg">
+    <a href="screenshots/ironforge.jpg" data-lightbox="wow"screenshots" title="ironforge.jpg">
       <img src="screenshots/ironforge.jpg" alt="ironforge.jpg">
     </a>
     ironforge.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/lost-temple.jpg" data-lightbox="screenshots" title="lost-temple.jpg">
+    <a href="screenshots/lost-temple.jpg" data-lightbox="wow"screenshots" title="lost-temple.jpg">
       <img src="screenshots/lost-temple.jpg" alt="lost-temple.jpg">
     </a>
     lost-temple.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/meeting-at-the-bridge.jpg" data-lightbox="screenshots" title="meeting-at-the-bridge.jpg">
+    <a href="screenshots/meeting-at-the-bridge.jpg" data-lightbox="wow"screenshots" title="meeting-at-the-bridge.jpg">
       <img src="screenshots/meeting-at-the-bridge.jpg" alt="meeting-at-the-bridge.jpg">
     </a>
     meeting-at-the-bridge.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Mountain-Giant.jpg" data-lightbox="screenshots" title="Mountain-Giant.jpg">
+    <a href="screenshots/Mountain-Giant.jpg" data-lightbox="wow"screenshots" title="Mountain-Giant.jpg">
       <img src="screenshots/Mountain-Giant.jpg" alt="Mountain-Giant.jpg">
     </a>
     Mountain-Giant.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/murlocs.jpg" data-lightbox="screenshots" title="murlocs.jpg">
+    <a href="screenshots/murlocs.jpg" data-lightbox="wow"screenshots" title="murlocs.jpg">
       <img src="screenshots/murlocs.jpg" alt="murlocs.jpg">
     </a>
     murlocs.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Night-Elf-at-Fountain.jpg" data-lightbox="screenshots" title="Night-Elf-at-Fountain.jpg">
+    <a href="screenshots/Night-Elf-at-Fountain.jpg" data-lightbox="wow"screenshots" title="Night-Elf-at-Fountain.jpg">
       <img src="screenshots/Night-Elf-at-Fountain.jpg" alt="Night-Elf-at-Fountain.jpg">
     </a>
     Night-Elf-at-Fountain.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Night-Elves-and-Mount.jpg" data-lightbox="screenshots" title="Night-Elves-and-Mount.jpg">
+    <a href="screenshots/Night-Elves-and-Mount.jpg" data-lightbox="wow"screenshots" title="Night-Elves-and-Mount.jpg">
       <img src="screenshots/Night-Elves-and-Mount.jpg" alt="Night-Elves-and-Mount.jpg">
     </a>
     Night-Elves-and-Mount.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/nightelfish.jpg" data-lightbox="screenshots" title="nightelfish.jpg">
+    <a href="screenshots/nightelfish.jpg" data-lightbox="wow"screenshots" title="nightelfish.jpg">
       <img src="screenshots/nightelfish.jpg" alt="nightelfish.jpg">
     </a>
     nightelfish.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/nightelves.jpg" data-lightbox="screenshots" title="nightelves.jpg">
+    <a href="screenshots/nightelves.jpg" data-lightbox="wow"screenshots" title="nightelves.jpg">
       <img src="screenshots/nightelves.jpg" alt="nightelves.jpg">
     </a>
     nightelves.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/nightmare.jpg" data-lightbox="screenshots" title="nightmare.jpg">
+    <a href="screenshots/nightmare.jpg" data-lightbox="wow"screenshots" title="nightmare.jpg">
       <img src="screenshots/nightmare.jpg" alt="nightmare.jpg">
     </a>
     nightmare.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Ogre-Mage.jpg" data-lightbox="screenshots" title="Ogre-Mage.jpg">
+    <a href="screenshots/Ogre-Mage.jpg" data-lightbox="wow"screenshots" title="Ogre-Mage.jpg">
       <img src="screenshots/Ogre-Mage.jpg" alt="Ogre-Mage.jpg">
     </a>
     Ogre-Mage.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/On-Horseback.jpg" data-lightbox="screenshots" title="On-Horseback.jpg">
+    <a href="screenshots/On-Horseback.jpg" data-lightbox="wow"screenshots" title="On-Horseback.jpg">
       <img src="screenshots/On-Horseback.jpg" alt="On-Horseback.jpg">
     </a>
     On-Horseback.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/orgrimmar.jpg" data-lightbox="screenshots" title="orgrimmar.jpg">
+    <a href="screenshots/orgrimmar.jpg" data-lightbox="wow"screenshots" title="orgrimmar.jpg">
       <img src="screenshots/orgrimmar.jpg" alt="orgrimmar.jpg">
     </a>
     orgrimmar.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/pumpkin-patch.jpg" data-lightbox="screenshots" title="pumpkin-patch.jpg">
+    <a href="screenshots/pumpkin-patch.jpg" data-lightbox="wow"screenshots" title="pumpkin-patch.jpg">
       <img src="screenshots/pumpkin-patch.jpg" alt="pumpkin-patch.jpg">
     </a>
     pumpkin-patch.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/ram.jpg" data-lightbox="screenshots" title="ram.jpg">
+    <a href="screenshots/ram.jpg" data-lightbox="wow"screenshots" title="ram.jpg">
       <img src="screenshots/ram.jpg" alt="ram.jpg">
     </a>
     ram.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Resurrection.jpg" data-lightbox="screenshots" title="Resurrection.jpg">
+    <a href="screenshots/Resurrection.jpg" data-lightbox="wow"screenshots" title="Resurrection.jpg">
       <img src="screenshots/Resurrection.jpg" alt="Resurrection.jpg">
     </a>
     Resurrection.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/shiny.jpg" data-lightbox="screenshots" title="shiny.jpg">
+    <a href="screenshots/shiny.jpg" data-lightbox="wow"screenshots" title="shiny.jpg">
       <img src="screenshots/shiny.jpg" alt="shiny.jpg">
     </a>
     shiny.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/stormwind-at-night.jpg" data-lightbox="screenshots" title="stormwind-at-night.jpg">
+    <a href="screenshots/stormwind-at-night.jpg" data-lightbox="wow"screenshots" title="stormwind-at-night.jpg">
       <img src="screenshots/stormwind-at-night.jpg" alt="stormwind-at-night.jpg">
     </a>
     stormwind-at-night.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/stormwind-at-night2.jpg" data-lightbox="screenshots" title="stormwind-at-night2.jpg">
+    <a href="screenshots/stormwind-at-night2.jpg" data-lightbox="wow"screenshots" title="stormwind-at-night2.jpg">
       <img src="screenshots/stormwind-at-night2.jpg" alt="stormwind-at-night2.jpg">
     </a>
     stormwind-at-night2.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/stormwind.jpg" data-lightbox="screenshots" title="stormwind.jpg">
+    <a href="screenshots/stormwind.jpg" data-lightbox="wow"screenshots" title="stormwind.jpg">
       <img src="screenshots/stormwind.jpg" alt="stormwind.jpg">
     </a>
     stormwind.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/throneroom.jpg" data-lightbox="screenshots" title="throneroom.jpg">
+    <a href="screenshots/throneroom.jpg" data-lightbox="wow"screenshots" title="throneroom.jpg">
       <img src="screenshots/throneroom.jpg" alt="throneroom.jpg">
     </a>
     throneroom.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/thunderbluff.jpg" data-lightbox="screenshots" title="thunderbluff.jpg">
+    <a href="screenshots/thunderbluff.jpg" data-lightbox="wow"screenshots" title="thunderbluff.jpg">
       <img src="screenshots/thunderbluff.jpg" alt="thunderbluff.jpg">
     </a>
     thunderbluff.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/troll-fight.jpg" data-lightbox="screenshots" title="troll-fight.jpg">
+    <a href="screenshots/troll-fight.jpg" data-lightbox="wow"screenshots" title="troll-fight.jpg">
       <img src="screenshots/troll-fight.jpg" alt="troll-fight.jpg">
     </a>
     troll-fight.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Troll-on-Raptor-Mount.jpg" data-lightbox="screenshots" title="Troll-on-Raptor-Mount.jpg">
+    <a href="screenshots/Troll-on-Raptor-Mount.jpg" data-lightbox="wow"screenshots" title="Troll-on-Raptor-Mount.jpg">
       <img src="screenshots/Troll-on-Raptor-Mount.jpg" alt="Troll-on-Raptor-Mount.jpg">
     </a>
     Troll-on-Raptor-Mount.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Undead-and-Mounts.jpg" data-lightbox="screenshots" title="Undead-and-Mounts.jpg">
+    <a href="screenshots/Undead-and-Mounts.jpg" data-lightbox="wow"screenshots" title="Undead-and-Mounts.jpg">
       <img src="screenshots/Undead-and-Mounts.jpg" alt="Undead-and-Mounts.jpg">
     </a>
     Undead-and-Mounts.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Undead-Patrol.jpg" data-lightbox="screenshots" title="Undead-Patrol.jpg">
+    <a href="screenshots/Undead-Patrol.jpg" data-lightbox="wow"screenshots" title="Undead-Patrol.jpg">
       <img src="screenshots/Undead-Patrol.jpg" alt="Undead-Patrol.jpg">
     </a>
     Undead-Patrol.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/undead.jpg" data-lightbox="screenshots" title="undead.jpg">
+    <a href="screenshots/undead.jpg" data-lightbox="wow"screenshots" title="undead.jpg">
       <img src="screenshots/undead.jpg" alt="undead.jpg">
     </a>
     undead.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/undercity.jpg" data-lightbox="screenshots" title="undercity.jpg">
+    <a href="screenshots/undercity.jpg" data-lightbox="wow"screenshots" title="undercity.jpg">
       <img src="screenshots/undercity.jpg" alt="undercity.jpg">
     </a>
     undercity.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/wolf.jpg" data-lightbox="screenshots" title="wolf.jpg">
+    <a href="screenshots/wolf.jpg" data-lightbox="wow"screenshots" title="wolf.jpg">
       <img src="screenshots/wolf.jpg" alt="wolf.jpg">
     </a>
     wolf.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/wyvern.jpg" data-lightbox="screenshots" title="wyvern.jpg">
+    <a href="screenshots/wyvern.jpg" data-lightbox="wow"screenshots" title="wyvern.jpg">
       <img src="screenshots/wyvern.jpg" alt="wyvern.jpg">
     </a>
     wyvern.jpg
   </div>
   <div class="gallery-item">
-    <a href="screenshots/Wyverns-under-the-Bridge.jpg" data-lightbox="screenshots" title="Wyverns-under-the-Bridge.jpg">
+    <a href="screenshots/Wyverns-under-the-Bridge.jpg" data-lightbox="wow"screenshots" title="Wyverns-under-the-Bridge.jpg">
       <img src="screenshots/Wyverns-under-the-Bridge.jpg" alt="Wyverns-under-the-Bridge.jpg">
     </a>
     Wyverns-under-the-Bridge.jpg
@@ -1166,38 +1208,42 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div id="templates" class="art-postcontent">📂 Templates</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="templates/button(psd).jpg" data-lightbox="templates" title="button(psd).jpg">
+    <a href="templates/button(psd).jpg" data-lightbox="wow"templates" title="button(psd).jpg">
       <img src="templates/button(psd).jpg" alt="button(psd).jpg">
     </a>
     button(psd).jpg
   </div>
   <div class="gallery-item">
-    <a href="templates/charactercircle(psd).jpg" data-lightbox="templates" title="charactercircle(psd).jpg">
+    <a href="templates/charactercircle(psd).jpg" data-lightbox="wow"templates" title="charactercircle(psd).jpg">
       <img src="templates/charactercircle(psd).jpg" alt="charactercircle(psd).jpg">
     </a>
     charactercircle(psd).jpg
   </div>
   <div class="gallery-item">
-    <a href="templates/icon(psd).jpg" data-lightbox="templates" title="icon(psd).jpg">
+    <a href="templates/icon(psd).jpg" data-lightbox="wow"templates" title="icon(psd).jpg">
       <img src="templates/icon(psd).jpg" alt="icon(psd).jpg">
     </a>
     icon(psd).jpg
   </div>
   <div class="gallery-item">
-    <a href="templates/screenshotborder(psd).jpg" data-lightbox="templates" title="screenshotborder(psd).jpg">
+    <a href="templates/screenshotborder(psd).jpg" data-lightbox="wow"templates" title="screenshotborder(psd).jpg">
       <img src="templates/screenshotborder(psd).jpg" alt="screenshotborder(psd).jpg">
     </a>
     screenshotborder(psd).jpg
   </div>
   <div class="gallery-item">
-    <a href="templates/texttemplate(psd).jpg" data-lightbox="templates" title="texttemplate(psd).jpg">
+    <a href="templates/texttemplate(psd).jpg" data-lightbox="wow"templates" title="texttemplate(psd).jpg">
       <img src="templates/texttemplate(psd).jpg" alt="texttemplate(psd).jpg">
     </a>
     texttemplate(psd).jpg
   </div>
 </div>
   
+<div class="footer-logos">
+  <a href="https://worldofwarcraft.com" target="_blank" rel="noopener noreferrer"><img src="assets/wowlogo.png" alt="World of Warcraft" /></a>
+  <a href="https://www.blizzard.com" target="_blank" rel="noopener noreferrer"><img src="assets/blizzardlogo.png" alt="Blizzard Entertainment" /></a>
 
+</div>
 
 
       <div class="footer" align="center">
@@ -1213,5 +1259,6 @@ Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
     'wrapAround': true
   });
 </script>
+
 </body>
 </html>
