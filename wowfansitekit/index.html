@@ -1260,5 +1260,58 @@ The excerpt below is from Blizzard’s original announcement:<br>
   });
 </script>
 
+<!-- Custom Lightbox Enhancements -->
+<script>
+  // Style override for Lightbox image sizing
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .lb-image {
+      width: 800px !important;
+      height: 600px !important;
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Debounced scroll navigation for Lightbox only
+  let lightboxScrollCooldown = false;
+
+  document.addEventListener('wheel', function(e) {
+    const lightboxOpen = document.querySelector('.lightboxOverlay')?.style.display === 'block';
+
+    if (!lightboxOpen) return; // Do nothing if Lightbox is closed
+
+    e.preventDefault(); // Block page scroll
+
+    if (!lightboxScrollCooldown) {
+      lightboxScrollCooldown = true;
+
+      if (e.deltaY < 0) {
+        document.querySelector('#lightbox a.lb-prev')?.click();
+      } else {
+        document.querySelector('#lightbox a.lb-next')?.click();
+      }
+
+      // ✅ Reset cooldown after 300ms
+      setTimeout(() => {
+        lightboxScrollCooldown = false;
+      }, 300); // You can raise this to slow it down more
+    }
+  }, { passive: false });
+</script>
+<script>
+  lightbox.option({
+    'resizeDuration': 0,
+    'fadeDuration': 0,
+    'imageFadeDuration': 0,
+    'wrapAround': true
+  });
+</script>
+
+
 </body>
 </html>
