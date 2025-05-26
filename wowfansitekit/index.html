@@ -4,7 +4,6 @@
   <title>World of Warcraft Fan Site</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <style>
 body {
   background-color: black;
@@ -18,23 +17,30 @@ a {
 a:visited {
   color: #CFCFCF;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 .main {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 10px;
+  max-width: 1200px;      
+  margin: 0 auto; 
+  box-sizing: border-box;
 }
 .nav {
-  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #1a1a1a;
-  padding: 10px;
-  border-right: 1px solid #333;
 }
-.nav a {
-  font-size: 12px;
+.nav a img {
+  display: block;
+  width: 180px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.nav a:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px gold);
 }
 @font-face {
   font-family: 'Folkard';
@@ -44,6 +50,29 @@ a:hover {
 .art-postcontent h1 {
   font-family: 'Folkard', serif;
   font-size: 38px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+
+  /* Prevent clipping */
+  padding-left: 6px;
+  padding-top: 6px;
+  line-height: 1.6;
+  overflow: visible;
+
+  /* Gradient */
+  background: -webkit-linear-gradient(top, #a06214 25%, #f0e636 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.art-postcontent {
+  font-family: 'Folkard', serif;
+  font-size: 28px;
   font-weight: normal;
   letter-spacing: 0.5px;
 
@@ -65,7 +94,11 @@ a:hover {
 
 .content {
   flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 20px;
 }
+
+
 .section-title {
   font-size: 12px;
   color: white;
@@ -109,6 +142,9 @@ a:hover {
 .lightboxOverlay {
   background: rgba(0, 0, 0, 0.95) !important;
 }
+.sub-link {
+  margin-left: 40px; /* adjust indentation */
+}
 .footer {
   font-size: 10px;
   color: #999;
@@ -120,35 +156,29 @@ a:hover {
   <center>
     <img src="html/images/header.jpg" width="600" height="137" alt="Header">
   </center>
-  <div class="main">
-    <div class="nav">
-      <font color="white"><b>Navigation</b></font><br>
-          <a href="#artwork">Artwork</a>
-          <a href="#html-images">Html/Images</a>
-          <a href="#logos">Logos</a>
-          <a href="#screenshots">Screenshots</a>
-          <a href="#templates">Templates</a>
-          <a href="#class_renders">Class Renders</a>
-          &nbsp;&nbsp;<a href="#class_renders-dwarves">Dwarves</a>
-          &nbsp;&nbsp;<a href="#class_renders-gnome">Gnome</a>
-          &nbsp;&nbsp;<a href="#class_renders-humans">Humans</a>
-          &nbsp;&nbsp;<a href="#class_renders-night elf">Night Elf</a>
-          &nbsp;&nbsp;<a href="#class_renders-orcs">Orcs</a>
-          &nbsp;&nbsp;<a href="#class_renders-tauren">Tauren</a>
-          &nbsp;&nbsp;<a href="#class_renders-trolls">Trolls</a>
-          &nbsp;&nbsp;<a href="#class_renders-undead">Undead</a>
-    </div>
-    <div class="content">
+
+<div class="main"> <!-- start main  -->
+
+<div class="nav"> <!-- start nav  -->
+    <a href="#artwork"><img src="assets/Artwork.gif" alt="Artwork"></a>
+    <a href="#class_renders"><img src="assets/ClassRenders.gif" alt="Class Renders"></a>
+    <a href="#html"><img src="assets/Html.gif" alt="Html"></a>
+    <a href="#logos"><img src="assets/Logos.gif" alt="Logos"></a>
+    <a href="#screenshots"><img src="assets/Screenshots.gif" alt="Screenshots"></a>
+    <a href="#templates"><img src="assets/Templates.gif" alt="Templates"></a>
+</div> <!-- end nav  -->
+
+<div class="content"> <!-- start content  -->
 
 <div class="art-postcontent"><h1>Welcome home, adventurer. Lok'tar ogar.</h1></div>
 
-<p>I created this site to showcase the World of Warcraft Fan Site Kit. While not a fan site itself per se, it serves as a complete display of the kit’s contents. Every asset has been extracted and organized to show exactly what Blizzard offered to fans at the time. I hope you enjoy exploring it as much as I enjoyed putting it together.</p>
+<p>I created this site to showcase the World of Warcraft Fan Site Kit. It serves as a complete display of the kit’s contents. Every asset has been extracted and organized to show exactly what Blizzard offered to fans at the time. I hope you enjoy exploring it as much as I enjoyed putting it together.</p>
 
-For reference, Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
+Blizzard announced the World of Warcraft Fan Site Kit as the following:<br>
 <div style="display: flex; align-items: flex-start; gap: 15px; margin: 20px 10px; max-width: 800px;">
   <img src="assets/fansitekit.jpg" alt="WoW Fan Site Kit" style="width: 150px; border: 1px solid #555;">
-  
-  <div style="font-family: Arial, sans-serif; font-size: 14px; color: #D7CEA4; line-height: 1.5;">
+
+<div style="font-family: Arial, sans-serif; font-size: 14px; color: #D7CEA4; line-height: 1.5;">
     <a href="assets/fansite_kit.zip" target="_blank" rel="noopener noreferrer" style="color: #FFB019; font-weight: bold;">World of Warcraft Fan Site Kit</a>
     <span style="color: #CFCFCF;"> [21.2 MB – ZIP]</span>
     <br>
@@ -163,13 +193,13 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     <a href="https://web.archive.org/web/20071126115704/http://www.worldofwarcraft.com:80/wrath/downloads.xml" target="_blank">Archived website here</a>
   </li>
 </ul>
-  </div>
+</div>
 </div>
 
-<div id="artwork" class="section-title">📂 Artwork</div>
+<div id="artwork" class="art-postcontent">📂 Artwork</div>
 <div class="gallery">
   <div class="gallery-item">
-    <a href="artwork/alliance.jpg" data-lightbox="artwork" title="alliance.jpg">
+    <a href="artwork/alliance.jpg" data-lightbox="artwork" data-title="alliance.jpg">
       <img src="artwork/alliance.jpg" alt="alliance.jpg">
     </a>
     alliance.jpg
@@ -223,7 +253,528 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     tauren.jpg
   </div>
 </div>
-<div id="html-images" class="section-title">📂 Html/Images</div>
+
+<br>
+<div id="class_renders-dwarves" class="art-postcontent">📂 Class Renders > 📂 Dwarves</div>
+<div class="gallery"> <!-- start Dwarve gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+      <img src="class_renders/Dwarves/hunter1.png" alt="hunter1.png">
+    </a>
+    hunter1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/mage1.png" data-lightbox="class_renders" title="mage1.png">
+      <img src="class_renders/Dwarves/mage1.png" alt="mage1.png">
+    </a>
+    mage1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/mage2.png" data-lightbox="class_renders" title="mage2.png">
+      <img src="class_renders/Dwarves/mage2.png" alt="mage2.png">
+    </a>
+    mage2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/paladin1.png" data-lightbox="class_renders" title="paladin1.png">
+      <img src="class_renders/Dwarves/paladin1.png" alt="paladin1.png">
+    </a>
+    paladin1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/paladin2.png" data-lightbox="class_renders" title="paladin2.png">
+      <img src="class_renders/Dwarves/paladin2.png" alt="paladin2.png">
+    </a>
+    paladin2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/preist1.png" data-lightbox="class_renders" title="preist1.png">
+      <img src="class_renders/Dwarves/preist1.png" alt="preist1.png">
+    </a>
+    preist1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/priest2.png" data-lightbox="class_renders" title="priest2.png">
+      <img src="class_renders/Dwarves/priest2.png" alt="priest2.png">
+    </a>
+    priest2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Dwarves/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Dwarves/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+      <img src="class_renders/Dwarves/warrior1.png" alt="warrior1.png">
+    </a>
+    warrior1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Dwarves/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Dwarves/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+</div> <!-- end Dwarve gallery  -->
+
+<br>
+<div id="class_renders-gnome" class="art-postcontent">📂 Class Renders > 📂 Gnome</div>
+<div class="gallery"> <!-- start Gnome gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/mage1.png" data-lightbox="class_renders" title="mage1.png">
+      <img src="class_renders/Gnome/mage1.png" alt="mage1.png">
+    </a>
+    mage1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/mage2.png" data-lightbox="class_renders" title="mage2.png">
+      <img src="class_renders/Gnome/mage2.png" alt="mage2.png">
+    </a>
+    mage2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/mage3.png" data-lightbox="class_renders" title="mage3.png">
+      <img src="class_renders/Gnome/mage3.png" alt="mage3.png">
+    </a>
+    mage3.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Gnome/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Gnome/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
+      <img src="class_renders/Gnome/warlock1.png" alt="warlock1.png">
+    </a>
+    warlock1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+      <img src="class_renders/Gnome/warlock2.png" alt="warlock2.png">
+    </a>
+    warlock2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+      <img src="class_renders/Gnome/warrior1.png" alt="warrior1.png">
+    </a>
+    warrior1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Gnome/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Gnome/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+</div> <!-- end Dwarve gallery  -->
+
+<br>
+<div id="class_renders-humans" class="art-postcontent">📂 Class Renders > 📂 Humans</div>
+<div class="gallery"> <!-- start Human gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Humans/mage.png" data-lightbox="class_renders" title="mage.png">
+      <img src="class_renders/Humans/mage.png" alt="mage.png">
+    </a>
+    mage.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/mage2.png" data-lightbox="class_renders" title="mage2.png">
+      <img src="class_renders/Humans/mage2.png" alt="mage2.png">
+    </a>
+    mage2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/paladin.png" data-lightbox="class_renders" title="paladin.png">
+      <img src="class_renders/Humans/paladin.png" alt="paladin.png">
+    </a>
+    paladin.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/priest.png" data-lightbox="class_renders" title="priest.png">
+      <img src="class_renders/Humans/priest.png" alt="priest.png">
+    </a>
+    priest.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/priest2.png" data-lightbox="class_renders" title="priest2.png">
+      <img src="class_renders/Humans/priest2.png" alt="priest2.png">
+    </a>
+    priest2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/rogue.png" data-lightbox="class_renders" title="rogue.png">
+      <img src="class_renders/Humans/rogue.png" alt="rogue.png">
+    </a>
+    rogue.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
+      <img src="class_renders/Humans/warlock1.png" alt="warlock1.png">
+    </a>
+    warlock1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+      <img src="class_renders/Humans/warlock2.png" alt="warlock2.png">
+    </a>
+    warlock2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Humans/warrior.png" data-lightbox="class_renders" title="warrior.png">
+      <img src="class_renders/Humans/warrior.png" alt="warrior.png">
+    </a>
+    warrior.png
+  </div>
+</div> <!-- end Human gallery  -->
+
+<br>
+<div id="class_renders-night elf" class="art-postcontent">📂 Class Renders > 📂 Night Elf</div>
+<div class="gallery"> <!-- start Night Elf gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/druid.png" data-lightbox="class_renders" title="druid.png">
+      <img src="class_renders/Night Elf/druid.png" alt="druid.png">
+    </a>
+    druid.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/druid2.png" data-lightbox="class_renders" title="druid2.png">
+      <img src="class_renders/Night Elf/druid2.png" alt="druid2.png">
+    </a>
+    druid2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+      <img src="class_renders/Night Elf/hunter1.png" alt="hunter1.png">
+    </a>
+    hunter1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+      <img src="class_renders/Night Elf/hunter2.png" alt="hunter2.png">
+    </a>
+    hunter2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/hunter3.png" data-lightbox="class_renders" title="hunter3.png">
+      <img src="class_renders/Night Elf/hunter3.png" alt="hunter3.png">
+    </a>
+    hunter3.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/priest.png" data-lightbox="class_renders" title="priest.png">
+      <img src="class_renders/Night Elf/priest.png" alt="priest.png">
+    </a>
+    priest.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/priest2.png" data-lightbox="class_renders" title="priest2.png">
+      <img src="class_renders/Night Elf/priest2.png" alt="priest2.png">
+    </a>
+    priest2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Night Elf/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Night Elf/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Night Elf/warrior.png" data-lightbox="class_renders" title="warrior.png">
+      <img src="class_renders/Night Elf/warrior.png" alt="warrior.png">
+    </a>
+    warrior.png
+  </div>
+</div> <!-- end Night Elf gallery  -->
+
+<br>
+<div id="class_renders-orcs" class="art-postcontent">📂 Class Renders > 📂 Orcs</div>
+<div class="gallery"> <!-- start Orcs gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+      <img src="class_renders/Orcs/hunter1.png" alt="hunter1.png">
+    </a>
+    hunter1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+      <img src="class_renders/Orcs/hunter2.png" alt="hunter2.png">
+    </a>
+    hunter2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Orcs/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Orcs/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+      <img src="class_renders/Orcs/shaman1.png" alt="shaman1.png">
+    </a>
+    shaman1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+      <img src="class_renders/Orcs/shaman2.png" alt="shaman2.png">
+    </a>
+    shaman2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/warlock.png" data-lightbox="class_renders" title="warlock.png">
+      <img src="class_renders/Orcs/warlock.png" alt="warlock.png">
+    </a>
+    warlock.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+      <img src="class_renders/Orcs/warlock2.png" alt="warlock2.png">
+    </a>
+    warlock2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/warrior.png" data-lightbox="class_renders" title="warrior.png">
+      <img src="class_renders/Orcs/warrior.png" alt="warrior.png">
+    </a>
+    warrior.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Orcs/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Orcs/warrior3.png" data-lightbox="class_renders" title="warrior3.png">
+      <img src="class_renders/Orcs/warrior3.png" alt="warrior3.png">
+    </a>
+    warrior3.png
+  </div>
+</div> <!-- end Orcs gallery  -->
+
+<br>
+<div id="class_renders-tauren" class="art-postcontent">📂 Class Renders > 📂 Tauren</div>
+<div class="gallery"> <!-- start Tauren gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/druid1.png" data-lightbox="class_renders" title="druid1.png">
+      <img src="class_renders/Tauren/druid1.png" alt="druid1.png">
+    </a>
+    druid1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/druid2.png" data-lightbox="class_renders" title="druid2.png">
+      <img src="class_renders/Tauren/druid2.png" alt="druid2.png">
+    </a>
+    druid2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+      <img src="class_renders/Tauren/hunter1.png" alt="hunter1.png">
+    </a>
+    hunter1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+      <img src="class_renders/Tauren/hunter2.png" alt="hunter2.png">
+    </a>
+    hunter2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+      <img src="class_renders/Tauren/shaman1.png" alt="shaman1.png">
+    </a>
+    shaman1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+      <img src="class_renders/Tauren/shaman2.png" alt="shaman2.png">
+    </a>
+    shaman2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+      <img src="class_renders/Tauren/warrior1.png" alt="warrior1.png">
+    </a>
+    warrior1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Tauren/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Tauren/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+</div> <!-- end Tauren gallery  -->
+
+<br>
+<div id="class_renders-trolls" class="art-postcontent">📂 Class Renders > 📂 Trolls</div>
+<div class="gallery"> <!-- start Troll gallery  -->
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
+      <img src="class_renders/Trolls/hunter1.png" alt="hunter1.png">
+    </a>
+    hunter1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
+      <img src="class_renders/Trolls/hunter2.png" alt="hunter2.png">
+    </a>
+    hunter2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/mage1.png" data-lightbox="class_renders" title="mage1.png">
+      <img src="class_renders/Trolls/mage1.png" alt="mage1.png">
+    </a>
+    mage1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/priest1.png" data-lightbox="class_renders" title="priest1.png">
+      <img src="class_renders/Trolls/priest1.png" alt="priest1.png">
+    </a>
+    priest1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Trolls/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Trolls/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
+      <img src="class_renders/Trolls/shaman1.png" alt="shaman1.png">
+    </a>
+    shaman1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
+      <img src="class_renders/Trolls/shaman2.png" alt="shaman2.png">
+    </a>
+    shaman2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
+      <img src="class_renders/Trolls/warrior1.png" alt="warrior1.png">
+    </a>
+    warrior1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Trolls/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Trolls/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+</div> <!-- end Troll gallery  -->
+
+<br>
+<div id="class_renders-undead" class="art-postcontent">📂 Class Renders > 📂 Undead</div>
+<div class="gallery">
+  <div class="gallery-item"> <!-- start Undead gallery  -->
+    <a href="class_renders/Undead/mage1.png" data-lightbox="class_renders" title="mage1.png">
+      <img src="class_renders/Undead/mage1.png" alt="mage1.png">
+    </a>
+    mage1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/mage2.png" data-lightbox="class_renders" title="mage2.png">
+      <img src="class_renders/Undead/mage2.png" alt="mage2.png">
+    </a>
+    mage2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/priest1.png" data-lightbox="class_renders" title="priest1.png">
+      <img src="class_renders/Undead/priest1.png" alt="priest1.png">
+    </a>
+    priest1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/priest2.png" data-lightbox="class_renders" title="priest2.png">
+      <img src="class_renders/Undead/priest2.png" alt="priest2.png">
+    </a>
+    priest2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
+      <img src="class_renders/Undead/rogue1.png" alt="rogue1.png">
+    </a>
+    rogue1.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
+      <img src="class_renders/Undead/rogue2.png" alt="rogue2.png">
+    </a>
+    rogue2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/rogue3.png" data-lightbox="class_renders" title="rogue3.png">
+      <img src="class_renders/Undead/rogue3.png" alt="rogue3.png">
+    </a>
+    rogue3.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/warlock.png" data-lightbox="class_renders" title="warlock.png">
+      <img src="class_renders/Undead/warlock.png" alt="warlock.png">
+    </a>
+    warlock.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
+      <img src="class_renders/Undead/warlock2.png" alt="warlock2.png">
+    </a>
+    warlock2.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/warlock3.png" data-lightbox="class_renders" title="warlock3.png">
+      <img src="class_renders/Undead/warlock3.png" alt="warlock3.png">
+    </a>
+    warlock3.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/warrior.png" data-lightbox="class_renders" title="warrior.png">
+      <img src="class_renders/Undead/warrior.png" alt="warrior.png">
+    </a>
+    warrior.png
+  </div>
+  <div class="gallery-item">
+    <a href="class_renders/Undead/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
+      <img src="class_renders/Undead/warrior2.png" alt="warrior2.png">
+    </a>
+    warrior2.png
+  </div>
+</div> <!-- end Undead gallery  -->
+
+<div id="html" class="art-postcontent">📂 Html > 📂 Images</div>
 <div class="gallery">
   <div class="gallery-item">
     <a href="html/images/header.jpg" data-lightbox="html-images" title="header.jpg">
@@ -232,7 +783,8 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     header.jpg
   </div>
 </div>
-<div id="logos" class="section-title">📂 Logos</div>
+
+<div id="logos" class="art-postcontent">📂 Logos</div>
 <div class="gallery">
   <div class="gallery-item">
     <a href="logos/blizzlogo.gif" data-lightbox="logos" title="blizzlogo.gif">
@@ -259,7 +811,8 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     WoWlogo(psd).jpg
   </div>
 </div>
-<div id="screenshots" class="section-title">📂 Screenshots</div>
+
+<div id="screenshots" class="art-postcontent">📂 Screenshots</div>
 <div class="gallery">
   <div class="gallery-item">
     <a href="screenshots/Alliance-Gathering.jpg" data-lightbox="screenshots" title="Alliance-Gathering.jpg">
@@ -610,7 +1163,7 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     Wyverns-under-the-Bridge.jpg
   </div>
 </div>
-<div id="templates" class="section-title">📂 Templates</div>
+<div id="templates" class="art-postcontent">📂 Templates</div>
 <div class="gallery">
   <div class="gallery-item">
     <a href="templates/button(psd).jpg" data-lightbox="templates" title="button(psd).jpg">
@@ -643,517 +1196,22 @@ For reference, Blizzard announced the World of Warcraft Fan Site Kit as the foll
     texttemplate(psd).jpg
   </div>
 </div>
-<div id="class_renders" class="section-title">📂 Class Renders</div>
-<div id="class_renders-dwarves" class="section-title" style="margin-top:10px; font-size:11px;">Dwarves</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
-      <img src="class_renders/Dwarves/hunter1.png" alt="hunter1.png">
-    </a>
-    hunter1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/mage1.png" data-lightbox="class_renders" title="mage1.png">
-      <img src="class_renders/Dwarves/mage1.png" alt="mage1.png">
-    </a>
-    mage1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/mage2.png" data-lightbox="class_renders" title="mage2.png">
-      <img src="class_renders/Dwarves/mage2.png" alt="mage2.png">
-    </a>
-    mage2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/paladin1.png" data-lightbox="class_renders" title="paladin1.png">
-      <img src="class_renders/Dwarves/paladin1.png" alt="paladin1.png">
-    </a>
-    paladin1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/paladin2.png" data-lightbox="class_renders" title="paladin2.png">
-      <img src="class_renders/Dwarves/paladin2.png" alt="paladin2.png">
-    </a>
-    paladin2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/preist1.png" data-lightbox="class_renders" title="preist1.png">
-      <img src="class_renders/Dwarves/preist1.png" alt="preist1.png">
-    </a>
-    preist1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/priest2.png" data-lightbox="class_renders" title="priest2.png">
-      <img src="class_renders/Dwarves/priest2.png" alt="priest2.png">
-    </a>
-    priest2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Dwarves/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Dwarves/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
-      <img src="class_renders/Dwarves/warrior1.png" alt="warrior1.png">
-    </a>
-    warrior1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Dwarves/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Dwarves/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-</div>
-<div id="class_renders-gnome" class="section-title" style="margin-top:10px; font-size:11px;">Gnome</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/mage1.png" data-lightbox="class_renders" title="mage1.png">
-      <img src="class_renders/Gnome/mage1.png" alt="mage1.png">
-    </a>
-    mage1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/mage2.png" data-lightbox="class_renders" title="mage2.png">
-      <img src="class_renders/Gnome/mage2.png" alt="mage2.png">
-    </a>
-    mage2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/mage3.png" data-lightbox="class_renders" title="mage3.png">
-      <img src="class_renders/Gnome/mage3.png" alt="mage3.png">
-    </a>
-    mage3.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Gnome/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Gnome/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
-      <img src="class_renders/Gnome/warlock1.png" alt="warlock1.png">
-    </a>
-    warlock1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
-      <img src="class_renders/Gnome/warlock2.png" alt="warlock2.png">
-    </a>
-    warlock2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
-      <img src="class_renders/Gnome/warrior1.png" alt="warrior1.png">
-    </a>
-    warrior1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Gnome/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Gnome/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-</div>
-<div id="class_renders-humans" class="section-title" style="margin-top:10px; font-size:11px;">Humans</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Humans/mage.png" data-lightbox="class_renders" title="mage.png">
-      <img src="class_renders/Humans/mage.png" alt="mage.png">
-    </a>
-    mage.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/mage2.png" data-lightbox="class_renders" title="mage2.png">
-      <img src="class_renders/Humans/mage2.png" alt="mage2.png">
-    </a>
-    mage2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/paladin.png" data-lightbox="class_renders" title="paladin.png">
-      <img src="class_renders/Humans/paladin.png" alt="paladin.png">
-    </a>
-    paladin.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/priest.png" data-lightbox="class_renders" title="priest.png">
-      <img src="class_renders/Humans/priest.png" alt="priest.png">
-    </a>
-    priest.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/priest2.png" data-lightbox="class_renders" title="priest2.png">
-      <img src="class_renders/Humans/priest2.png" alt="priest2.png">
-    </a>
-    priest2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/rogue.png" data-lightbox="class_renders" title="rogue.png">
-      <img src="class_renders/Humans/rogue.png" alt="rogue.png">
-    </a>
-    rogue.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/warlock1.png" data-lightbox="class_renders" title="warlock1.png">
-      <img src="class_renders/Humans/warlock1.png" alt="warlock1.png">
-    </a>
-    warlock1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
-      <img src="class_renders/Humans/warlock2.png" alt="warlock2.png">
-    </a>
-    warlock2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Humans/warrior.png" data-lightbox="class_renders" title="warrior.png">
-      <img src="class_renders/Humans/warrior.png" alt="warrior.png">
-    </a>
-    warrior.png
-  </div>
-</div>
-<div id="class_renders-night elf" class="section-title" style="margin-top:10px; font-size:11px;">Night Elf</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/druid.png" data-lightbox="class_renders" title="druid.png">
-      <img src="class_renders/Night Elf/druid.png" alt="druid.png">
-    </a>
-    druid.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/druid2.png" data-lightbox="class_renders" title="druid2.png">
-      <img src="class_renders/Night Elf/druid2.png" alt="druid2.png">
-    </a>
-    druid2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
-      <img src="class_renders/Night Elf/hunter1.png" alt="hunter1.png">
-    </a>
-    hunter1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
-      <img src="class_renders/Night Elf/hunter2.png" alt="hunter2.png">
-    </a>
-    hunter2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/hunter3.png" data-lightbox="class_renders" title="hunter3.png">
-      <img src="class_renders/Night Elf/hunter3.png" alt="hunter3.png">
-    </a>
-    hunter3.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/priest.png" data-lightbox="class_renders" title="priest.png">
-      <img src="class_renders/Night Elf/priest.png" alt="priest.png">
-    </a>
-    priest.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/priest2.png" data-lightbox="class_renders" title="priest2.png">
-      <img src="class_renders/Night Elf/priest2.png" alt="priest2.png">
-    </a>
-    priest2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Night Elf/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Night Elf/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Night Elf/warrior.png" data-lightbox="class_renders" title="warrior.png">
-      <img src="class_renders/Night Elf/warrior.png" alt="warrior.png">
-    </a>
-    warrior.png
-  </div>
-</div>
-<div id="class_renders-orcs" class="section-title" style="margin-top:10px; font-size:11px;">Orcs</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
-      <img src="class_renders/Orcs/hunter1.png" alt="hunter1.png">
-    </a>
-    hunter1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
-      <img src="class_renders/Orcs/hunter2.png" alt="hunter2.png">
-    </a>
-    hunter2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Orcs/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Orcs/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
-      <img src="class_renders/Orcs/shaman1.png" alt="shaman1.png">
-    </a>
-    shaman1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
-      <img src="class_renders/Orcs/shaman2.png" alt="shaman2.png">
-    </a>
-    shaman2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/warlock.png" data-lightbox="class_renders" title="warlock.png">
-      <img src="class_renders/Orcs/warlock.png" alt="warlock.png">
-    </a>
-    warlock.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
-      <img src="class_renders/Orcs/warlock2.png" alt="warlock2.png">
-    </a>
-    warlock2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior.png" data-lightbox="class_renders" title="warrior.png">
-      <img src="class_renders/Orcs/warrior.png" alt="warrior.png">
-    </a>
-    warrior.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Orcs/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Orcs/warrior3.png" data-lightbox="class_renders" title="warrior3.png">
-      <img src="class_renders/Orcs/warrior3.png" alt="warrior3.png">
-    </a>
-    warrior3.png
-  </div>
-</div>
-<div id="class_renders-tauren" class="section-title" style="margin-top:10px; font-size:11px;">Tauren</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/druid1.png" data-lightbox="class_renders" title="druid1.png">
-      <img src="class_renders/Tauren/druid1.png" alt="druid1.png">
-    </a>
-    druid1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/druid2.png" data-lightbox="class_renders" title="druid2.png">
-      <img src="class_renders/Tauren/druid2.png" alt="druid2.png">
-    </a>
-    druid2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
-      <img src="class_renders/Tauren/hunter1.png" alt="hunter1.png">
-    </a>
-    hunter1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
-      <img src="class_renders/Tauren/hunter2.png" alt="hunter2.png">
-    </a>
-    hunter2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
-      <img src="class_renders/Tauren/shaman1.png" alt="shaman1.png">
-    </a>
-    shaman1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
-      <img src="class_renders/Tauren/shaman2.png" alt="shaman2.png">
-    </a>
-    shaman2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
-      <img src="class_renders/Tauren/warrior1.png" alt="warrior1.png">
-    </a>
-    warrior1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Tauren/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Tauren/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-</div>
-<div id="class_renders-trolls" class="section-title" style="margin-top:10px; font-size:11px;">Trolls</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/hunter1.png" data-lightbox="class_renders" title="hunter1.png">
-      <img src="class_renders/Trolls/hunter1.png" alt="hunter1.png">
-    </a>
-    hunter1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/hunter2.png" data-lightbox="class_renders" title="hunter2.png">
-      <img src="class_renders/Trolls/hunter2.png" alt="hunter2.png">
-    </a>
-    hunter2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/mage1.png" data-lightbox="class_renders" title="mage1.png">
-      <img src="class_renders/Trolls/mage1.png" alt="mage1.png">
-    </a>
-    mage1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/priest1.png" data-lightbox="class_renders" title="priest1.png">
-      <img src="class_renders/Trolls/priest1.png" alt="priest1.png">
-    </a>
-    priest1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Trolls/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Trolls/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/shaman1.png" data-lightbox="class_renders" title="shaman1.png">
-      <img src="class_renders/Trolls/shaman1.png" alt="shaman1.png">
-    </a>
-    shaman1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/shaman2.png" data-lightbox="class_renders" title="shaman2.png">
-      <img src="class_renders/Trolls/shaman2.png" alt="shaman2.png">
-    </a>
-    shaman2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/warrior1.png" data-lightbox="class_renders" title="warrior1.png">
-      <img src="class_renders/Trolls/warrior1.png" alt="warrior1.png">
-    </a>
-    warrior1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Trolls/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Trolls/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-</div>
-<div id="class_renders-undead" class="section-title" style="margin-top:10px; font-size:11px;">Undead</div>
-<div class="gallery">
-  <div class="gallery-item">
-    <a href="class_renders/Undead/mage1.png" data-lightbox="class_renders" title="mage1.png">
-      <img src="class_renders/Undead/mage1.png" alt="mage1.png">
-    </a>
-    mage1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/mage2.png" data-lightbox="class_renders" title="mage2.png">
-      <img src="class_renders/Undead/mage2.png" alt="mage2.png">
-    </a>
-    mage2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/priest1.png" data-lightbox="class_renders" title="priest1.png">
-      <img src="class_renders/Undead/priest1.png" alt="priest1.png">
-    </a>
-    priest1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/priest2.png" data-lightbox="class_renders" title="priest2.png">
-      <img src="class_renders/Undead/priest2.png" alt="priest2.png">
-    </a>
-    priest2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/rogue1.png" data-lightbox="class_renders" title="rogue1.png">
-      <img src="class_renders/Undead/rogue1.png" alt="rogue1.png">
-    </a>
-    rogue1.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/rogue2.png" data-lightbox="class_renders" title="rogue2.png">
-      <img src="class_renders/Undead/rogue2.png" alt="rogue2.png">
-    </a>
-    rogue2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/rogue3.png" data-lightbox="class_renders" title="rogue3.png">
-      <img src="class_renders/Undead/rogue3.png" alt="rogue3.png">
-    </a>
-    rogue3.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/warlock.png" data-lightbox="class_renders" title="warlock.png">
-      <img src="class_renders/Undead/warlock.png" alt="warlock.png">
-    </a>
-    warlock.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/warlock2.png" data-lightbox="class_renders" title="warlock2.png">
-      <img src="class_renders/Undead/warlock2.png" alt="warlock2.png">
-    </a>
-    warlock2.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/warlock3.png" data-lightbox="class_renders" title="warlock3.png">
-      <img src="class_renders/Undead/warlock3.png" alt="warlock3.png">
-    </a>
-    warlock3.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/warrior.png" data-lightbox="class_renders" title="warrior.png">
-      <img src="class_renders/Undead/warrior.png" alt="warrior.png">
-    </a>
-    warrior.png
-  </div>
-  <div class="gallery-item">
-    <a href="class_renders/Undead/warrior2.png" data-lightbox="class_renders" title="warrior2.png">
-      <img src="class_renders/Undead/warrior2.png" alt="warrior2.png">
-    </a>
-    warrior2.png
-  </div>
-</div>
+  
+
+
 
       <div class="footer" align="center">
-        World of Warcraft™ and Blizzard Entertainment™ are trademarks or registered trademarks of Blizzard Entertainment, Inc.<br>
-        This fan site is not affiliated with or endorsed by Blizzard Entertainment. Assets used under the original Fan Site Kit license.
+        World of Warcraft™ and Blizzard Entertainment™ are trademarks or registered trademarks of Blizzard Entertainment in the United States and/or other countries.<br>
+        These terms and all related materials, logos, and images are copyright © Blizzard Entertainment. This site is in no way associated with or endorsed by Blizzard Entertainment™.
       </div>
-    </div>
-  </div>
+
+</div> <!-- end content-->
+</div> <!-- end main -->
+<script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  });
+</script>
 </body>
 </html>
